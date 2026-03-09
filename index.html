@@ -25,17 +25,16 @@
         <h2 class="section-title reveal"><i class="fas fa-user-circle"></i> Get to Know Me</h2>
         <div class="tabs-wrapper reveal">
             <nav class="tab-nav">
-                <button class="tab-btn active" data-tab="who">Who Am I?</button>
-                <button class="tab-btn" data-tab="personality">Personality</button>
-                <button class="tab-btn" data-tab="ethics">Ethics &amp; Values</button>
-                <button class="tab-btn" data-tab="worldview">World View</button>
-                <button class="tab-btn" data-tab="tech">Tech Philosophy</button>
-                <button class="tab-btn" data-tab="story">My Story</button>
+                <a class="tab-btn" href="#tab-who">Who Am I?</a>
+                <a class="tab-btn" href="#tab-ethics">Ethics &amp; Values</a>
+                <a class="tab-btn" href="#tab-worldview">World View</a>
+                <a class="tab-btn" href="#tab-story">My Story</a>
             </nav>
             <div class="tab-panels">
 
                 <!-- WHO AM I -->
-                <div class="tab-panel active" id="tab-who">
+                <div class="tab-panel" id="tab-who">
+                    <p class="panel-title">Who Am I?</p>
                     <div class="stub-card">
                         <p class="stub-question">The 30-second pitch</p>
                         <p class="stub-hint">If someone at a coffee shop asked "so, what do you do?" — what would you actually say? Go beyond the job title and the major.</p>
@@ -53,37 +52,9 @@
                     </div>
                 </div>
 
-                <!-- PERSONALITY -->
-                <div class="tab-panel" id="tab-personality">
-                    <div class="stub-card">
-                        <p class="stub-question">How you show up</p>
-                        <p class="stub-hint">Are you the quiet deep-thinker, the enthusiastic idea-pitcher, the pragmatic closer? How would a close teammate describe you in a single sentence?</p>
-                        <p class="stub-answer">I am a quiet deep-thinker who values thoughtful collaboration and is committed to creating technology that serves the common good.</p>
-                    </div>
-                    <div class="stub-card">
-                        <p class="stub-question">Your superpower</p>
-                        <p class="stub-hint">What do teammates consistently rely on you for — debugging, staying calm under fire, creative problem-solving, bridging communication gaps?</p>
-                        <p class="stub-answer"></p>
-                    </div>
-                    <div class="stub-card">
-                        <p class="stub-question">Your kryptonite</p>
-                        <p class="stub-hint">What's a real challenge you're actively working on? Authenticity here goes a long way — nobody's perfect and people respect self-awareness.</p>
-                        <p class="stub-answer">✍️ Add your answer here</p>
-                    </div>
-                    <div class="stub-card">
-                        <p class="stub-question">How you recharge</p>
-                        <p class="stub-hint">Introvert, extrovert, somewhere in between? What does a genuinely good day off look like for you?</p>
-                        <p class="stub-answer">✍️ Add your answer here</p>
-                    </div>
-                    <div class="stub-card">
-                        <p class="stub-question">Under pressure</p>
-                        <p class="stub-hint">Walk through how you handle a tight deadline, a broken production build, or an ambiguous spec. What does stress look like on you — and how do you get through it?</p>
-                        <p class="stub-answer">✍️ Add your answer here</p>
-                    </div>
-                </div>
-
                 <!-- ETHICS & VALUES -->
                 <div class="tab-panel" id="tab-ethics">
+                    <p class="panel-title">Ethics &amp; Values</p>
                     <div class="stub-card">
                         <p class="stub-question">Your line in the sand</p>
                         <p class="stub-hint">Is there something you'd decline to build or work on, even for great pay? Think: mass surveillance, weaponized AI, manipulative dark patterns, privacy violations.</p>
@@ -108,6 +79,7 @@
 
                 <!-- WORLD VIEW -->
                 <div class="tab-panel" id="tab-worldview">
+                    <p class="panel-title">World View</p>
                     <div class="stub-card">
                         <p class="stub-question">The problem that haunts you</p>
                         <p class="stub-hint">What challenge in the world do you think technology is uniquely positioned to help solve? What keeps you motivated beyond the paycheck?</p>
@@ -130,37 +102,9 @@
                     </div>
                 </div>
 
-                <!-- TECH PHILOSOPHY -->
-                <div class="tab-panel" id="tab-tech">
-                    <div class="stub-card">
-                        <p class="stub-question">Your engineering north star</p>
-                        <p class="stub-hint">What principle guides how you write code more than anything else? Simplicity, correctness, performance, readability, testability — or something harder to name?</p>
-                        <p class="stub-answer">✍️ Add your answer here</p>
-                    </div>
-                    <div class="stub-card">
-                        <p class="stub-question">Tools vs. first principles</p>
-                        <p class="stub-hint">Are you more energized by mastering a specific stack deeply, or by understanding fundamentals well enough to pick up anything? Make your case.</p>
-                        <p class="stub-answer">✍️ Add your answer here</p>
-                    </div>
-                    <div class="stub-card">
-                        <p class="stub-question">A hot take</p>
-                        <p class="stub-hint">What's a technology, framework, or industry trend you think is overhyped — or criminally under-appreciated? Don't hedge, pick a side.</p>
-                        <p class="stub-answer">✍️ Add your answer here</p>
-                    </div>
-                    <div class="stub-card">
-                        <p class="stub-question">Good vs. great engineering</p>
-                        <p class="stub-hint">What separates a good software engineer from a great one in your eyes? Raw skill, taste, judgment, habits, communication — what actually moves the needle?</p>
-                        <p class="stub-answer">✍️ Add your answer here</p>
-                    </div>
-                    <div class="stub-card">
-                        <p class="stub-question">How you learn</p>
-                        <p class="stub-hint">When you encounter something completely new — a codebase, a domain, a tool — what's your actual process for getting up to speed quickly?</p>
-                        <p class="stub-answer">✍️ Add your answer here</p>
-                    </div>
-                </div>
-
                 <!-- MY STORY -->
                 <div class="tab-panel" id="tab-story">
+                    <p class="panel-title">My Story</p>
                     <div class="stub-card">
                         <p class="stub-question">Before CS</p>
                         <p class="stub-hint">Where did you grow up? What was life like before tech became central to your identity? What did younger-you think they'd end up doing?</p>
@@ -283,14 +227,21 @@
 
         document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
 
-        document.querySelectorAll('.tab-btn').forEach(btn => {
-            btn.addEventListener('click', () => {
-                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-                document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
-                btn.classList.add('active');
-                document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
+        // Highlight the nav link for the section currently in view
+        const panels = document.querySelectorAll('.tab-panel');
+        const navLinks = document.querySelectorAll('.tab-btn');
+
+        const navObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    navLinks.forEach(a => a.classList.remove('active'));
+                    const link = document.querySelector('.tab-btn[href="#' + entry.target.id + '"]');
+                    if (link) link.classList.add('active');
+                }
             });
-        });
+        }, { rootMargin: '-20% 0px -70% 0px' });
+
+        panels.forEach(p => navObserver.observe(p));
     </script>
 </body>
 </html>
