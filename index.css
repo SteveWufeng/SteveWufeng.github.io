@@ -187,7 +187,9 @@ footer {
 }
 
 .tab-panel {
-    display: none;
+    display: block;
+    scroll-margin-top: 90px;
+    margin-bottom: 28px;
 }
 
 .tab-panel.active {
