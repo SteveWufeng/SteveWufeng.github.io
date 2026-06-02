@@ -10,28 +10,27 @@
 
 % Font
 \usepackage[T1]{fontenc}
-\usepackage{mathptmx}
 
 \pagestyle{empty}
 
 % Section formatting
-\titleformat{\section}{\large\bfseries\uppercase}{}{0em}{}[\vspace{-0.4em}\rule{\textwidth}{0.5pt}]
-\titlespacing{\section}{0pt}{0.8em}{0.3em}
+\titleformat{\section}{\large\bfseries\uppercase}{}{0em}{}[\vspace{-0.6em}\rule{\textwidth}{0.5pt}]
+\titlespacing{\section}{0pt}{0.5em}{0.2em}
 
 % Subsection formatting
 \titleformat{\subsection}{\bfseries}{}{0em}{}
-\titlespacing{\subsection}{0pt}{0.5em}{0em}
+\titlespacing{\subsection}{0pt}{0.3em}{0em}
 
 \newcommand{\resumeSubItem}[2]{\textbf{#1}\quad#2}
 
 \newcommand{\experience}[4]{
   \subsection{\texorpdfstring{\makebox[\linewidth][s]{#1\hfill\normalfont #4}}{#1 --- #4}}
   \textit{#2}\hfill\textit{#3}\par
-  \vspace{0.2em}
+  \vspace{0.1em}
 }
 
 \newenvironment{bullets}{
-  \begin{itemize}[leftmargin=*,nosep,topsep=0.2em,itemsep=0.08em]
+  \begin{itemize}[leftmargin=*,nosep,topsep=0.08em,itemsep=0.02em]
 }{
   \end{itemize}
 }
@@ -39,7 +38,7 @@
 \newcommand{\project}[4]{
   \subsection{\texorpdfstring{\makebox[\linewidth][s]{#1\hfill\normalfont #4}}{#1 --- #4}}
   \textit{#2}\hfill\textit{#3}\par
-  \vspace{0.2em}
+  \vspace{0.1em}
 }
 
 \begin{document}
@@ -59,22 +58,23 @@
 \section{Education}
 \subsection{\texorpdfstring{\makebox[\linewidth][s]{Rochester Institute of Technology\hfill\normalfont Rochester, NY}}{Rochester Institute of Technology}}
 \textit{Bachelor of Science in Computer Science, Minor: Mathematics}\hfill\textit{Aug 2021 -- May 2026}\par
+\vspace{-0.35em}
 \textbf{Cumulative GPA: 3.85/4.00}\par
-\vspace{0.3em}
-\textbf{Relevant Coursework:} Large Language Models, Artificial Intelligence, Computer Graphics, Data Management, VR/AR Interactive Music, Simulation \& Randomness, Ethics in Leadership\par
+
+% SKILLS
+\section{Technical Skills}
+\begin{tabular}{@{}p{2.8cm}@{}p{\dimexpr\textwidth-2.8cm\relax}@{}}
+\textbf{Languages:}      & Python, Java, C\#, C/C++, TypeScript, Dart, MATLAB, SQL \\
+\textbf{Web/Mobile:}  & Next.js, React, Vue.js, Angular, Flutter, HTML/CSS, Node.js \\
+\textbf{DevOps:}         & Docker, GitHub Actions (CI/CD), Railway, Cloudflare R2, Firebase, Google Cloud Platform, Azure DevOps \\
+\textbf{AI/ML:}          & NVIDIA TAO, OCRNet, vLLM, SGLang, Large Language Models, Computer Vision, DirectML \\
+\textbf{Databases:}      & PostgreSQL, Prisma ORM, Firestore, MySQL \\
+\textbf{Tools:}          & Git, OpenCode, Visual Studio Code, Vim, Android Studio, Figma, Proxmox, Virtual Machines, GitHub Copilot \\
+\textbf{Hardware:}       & Raspberry Pi, ESP32, 3D Printing (OnShape), PixHawk, ArduPilot, Sixfab LTE \\
+\end{tabular}
 
 % EXPERIENCE
 \section{Experience}
-
-\experience{Full-Stack Developer (Personal Project)}{E-Commerce}{Spokane, WA}{Jan 2026 -- Present}
-\begin{bullets}
-  \item Architected a production-ready full-stack e-commerce platform with Next.js 14, TypeScript, and PostgreSQL (Prisma ORM)
-  \item Containerized the application using Docker with multi-stage builds and deployed on Railway with automated CI/CD via GitHub Actions
-  \item Integrated Cloudflare R2 (S3-compatible) for product image and payment receipt storage with secure upload flows
-  \item Implemented a complete order lifecycle (PENDING $\to$ CONFIRMED $\to$ READY\_FOR\_PICKUP $\to$ PICKED\_UP / REJECTED) with admin receipt review panel
-  \item Built RESTful API layer handling authentication (NextAuth.js), cart management, product CRUD, and analytics endpoints
-  \item Wrote unit and integration tests using Jest; configured Docker Compose for local PostgreSQL development
-\end{bullets}
 
 \experience{Embedded Software Engineer}{Waygate Technologies (Baker Hughes)}{Skaneateles, NY}{Jul 2025 -- Dec 2025}
 \begin{bullets}
@@ -83,7 +83,9 @@
   \item Built and deployed computer vision models into production testing environments using DirectML and C++ inference pipelines
   \item Developed 4 automation test cases for pipeline validation, improving regression coverage for build releases
   \item Processed and analyzed large-scale inspection data to identify failure patterns and optimize model accuracy
+  \item Leveraged GitHub Copilot to accelerate C++ inference pipeline development and automation scripts
 \end{bullets}
+\textit{Key Skills:} Python, C++, DirectML, NVIDIA TAO, Computer Vision, CI/CD, GitHub Copilot\par
 
 \experience{Jr. Software Developer}{Tive Technology}{Remote}{Jun 2024 -- Sep 2024}
 \begin{bullets}
@@ -92,32 +94,44 @@
   \item Built backend services with Firebase including Firestore data modeling, Authentication, and Security Rules
   \item Developed and maintained RESTful APIs with SpringBoot for server-side business logic
 \end{bullets}
+\textit{Key Skills:} Flutter, Dart, Firebase, Firestore, RESTful APIs, SpringBoot, Android Studio, GitHub Copilot\par
 
 \experience{Research Assistant}{RIT CAIR Lab}{Rochester, NY}{Sep 2023 -- May 2024}
 \begin{bullets}
   \item Implemented a real-time transcription web service integrating Google Cloud Speech-to-Text with prosody and emotion analysis to assist deaf and hard-of-hearing users
+  \item Built RESTful API layer for captioning service and containerized the application with Docker for deployment
   \item Collected and analyzed experiment data comparing traditional vs.\ affective captioning systems for accessibility research
-  \item Analyzed eye-tracker data using Python and contributed findings to a paper presented at the ASSETS conference
   \item Built the frontend interface using React and Vue.js for live captioning visualization
 \end{bullets}
+\textit{Key Skills:} Google Cloud Platform, Speech-to-Text, RESTful APIs, Docker, React, Vue.js, Python, GitHub Copilot\par
 
-\experience{Research Assistant}{RIT Global Cybersecurity Institute}{Rochester, NY}{Sep 2022 -- Jul 2023}
-\begin{bullets}
-  \item Performed statistical analysis and processing on MITRE threat alerts to identify security patterns
-  \item Set up space cyber-physical simulations with NS-3 for satellite communication and motion modeling
-  \item Analyzed real-time satellite motion and communication systems using MATLAB and C++
-\end{bullets}
-
-\experience{Research Intern}{Tufts University}{Medford, MA}{May 2022 -- Jul 2022}
-\begin{bullets}
-  \item Optimized properties of novel polymers using gradient descent algorithms in MATLAB and C++
-  \item Applied object-oriented class structure and documentation practices to the Morpho-Lang compiler project
-  \item Solved compiler and modular design problems for Morpho-Lang, an open-source scientific computing language
-  \item Assembled a research poster presented to material science experts
-\end{bullets}
+%\experience{Research Assistant}{RIT Global Cybersecurity Institute}{Rochester, NY}{Sep 2022 -- Jul 2023}
+%\begin{bullets}
+%  \item Performed statistical analysis and processing on MITRE threat alerts to identify security patterns
+%  \item Set up space cyber-physical simulations with NS-3 for satellite communication and motion modeling
+%  \item Analyzed real-time satellite motion and communication systems using MATLAB and C++
+%\end{bullets}
+%
+%\experience{Research Intern}{Tufts University}{Medford, MA}{May 2022 -- Jul 2022}
+%\begin{bullets}
+%  \item Optimized properties of novel polymers using gradient descent algorithms in MATLAB and C++
+%  \item Applied object-oriented class structure and documentation practices to the Morpho-Lang compiler project
+%  \item Solved compiler and modular design problems for Morpho-Lang, an open-source scientific computing language
+%  \item Assembled a research poster presented to material science experts
+%\end{bullets}
 
 % PROJECTS
 \section{Projects}
+
+\project{Full-Stack E-Commerce Platform}{Personal Project}{Spokane, WA}{Jan 2026 -- Present}
+\begin{bullets}
+  \item Architected a production-ready full-stack e-commerce platform with Next.js 14, TypeScript, and PostgreSQL (Prisma ORM)
+  \item Containerized with Docker multi-stage builds and deployed on Railway with automated CI/CD via GitHub Actions
+  \item Integrated Cloudflare R2 (S3-compatible) for storage and built RESTful API layer handling authentication, cart management, and order lifecycle
+  \item Orchestrated multi-agent development with OpenCode and opencode-ensemble, leveraging GitHub Copilot across agents for accelerated delivery
+  \item Advanced agent/worktree isolation patterns for secure parallel software engineering team orchestration
+\end{bullets}
+\textit{Key Skills:} Next.js, TypeScript, PostgreSQL, Prisma ORM, Docker, CI/CD, Cloudflare R2, NextAuth.js, OpenCode, GitHub Copilot, Agent Orchestration\par
 
 \project{NeuralCube -- Open Source Autonomous Robot}{Collaborator (with Chanel F. Cheng)}{Remote}{2024 -- Present}
 \begin{bullets}
@@ -136,31 +150,12 @@
   \item Tech stack: Python, Raspberry Pi, ArduPilot, PixHawk, Computer Vision, IoT
 \end{bullets}
 
-\project{KittyFan -- Persistence of Vision Display}{Personal Project}{Rochester, NY}{2022}
-\begin{bullets}
-  \item Created a persistence of vision (POV) display using programmable LED strips and 3D-printed rotating hardware
-  \item Implemented mathematical visual logic (Calculus II) for image rendering on a spinning display
-  \item Tech stack: Python, Raspberry Pi, 3D Printing, Electronics
-\end{bullets}
 
-% SKILLS
-\section{Technical Skills}
-\begin{tabular}{@{}p{2.8cm}@{}p{\dimexpr\textwidth-2.8cm\relax}@{}}
-\textbf{Languages:}      & Python, Java, C\#, C/C++, TypeScript, Dart, MATLAB, SQL \\
-\textbf{Web \& Mobile:}  & Next.js, React, Vue.js, Angular, Flutter, HTML/CSS, Node.js \\
-\textbf{Cloud\&DevOps:} & Docker, GitHub Actions (CI/CD), Railway, Cloudflare R2, Firebase, Google Cloud Platform, Azure DevOps \\
-\textbf{AI/ML:}          & NVIDIA TAO, OCRNet, vLLM, SGLang, Large Language Models, Computer Vision, DirectML \\
-\textbf{Databases:}      & PostgreSQL, Prisma ORM, Firestore, MySQL \\
-\textbf{Tools:}          & Git, Visual Studio Code, Vim, Android Studio, Figma, Proxmox, Virtual Machines \\
-\textbf{Hardware:}       & Raspberry Pi, ESP32, 3D Printing (OnShape), PixHawk, ArduPilot, Sixfab LTE \\
-\end{tabular}
-
-% EXTRACURRICULAR
-\section{Leadership \& Community}
-\subsection{\texorpdfstring{\makebox[\linewidth][s]{Computer Science House (CSH)\hfill\normalfont\itshape Aug 2021 -- Present}}{Computer Science House (CSH)}}
-Active member of RIT's CS-focused living-learning community. Hosted 5 technical seminars and workshops on DevOps, Linux administration, and software development to mentor peers and spread knowledge across the community.
-
-\subsection{\texorpdfstring{\makebox[\linewidth][s]{RIT Artificial Intelligence Club\hfill\normalfont\itshape Aug 2022 -- Present}}{RIT Artificial Intelligence Club}}
-Member of AI enthusiast community. Explore active research areas in AI/ML with fellow students and collaborate on group projects. Participated in discussions on large language models, computer vision, and autonomous systems.
+%\section{Leadership \& Community}
+%\subsection{\texorpdfstring{\makebox[\linewidth][s]{Computer Science House (CSH)\hfill\normalfont\itshape Aug 2021 -- Present}}{Computer Science House (CSH)}}
+%Active member of RIT's CS-focused living-learning community. Hosted 5 technical seminars and workshops on DevOps, Linux administration, and software development to mentor peers and spread knowledge across the community.
+%
+%\subsection{\texorpdfstring{\makebox[\linewidth][s]{RIT Artificial Intelligence Club\hfill\normalfont\itshape Aug 2022 -- Present}}{RIT Artificial Intelligence Club}}
+%Member of AI enthusiast community. Explore active research areas in AI/ML with fellow students and collaborate on group projects. Participated in discussions on large language models, computer vision, and autonomous systems.
 
 \end{document}
