@@ -1,0 +1,13 @@
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.dvi
+missfont.log
+pdflatex*.fls
+tstex_modules/
+Rooted in Sound BTS.mov
+session-ses_*.md
+UI-ANALYSIS.md
