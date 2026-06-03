@@ -62,14 +62,13 @@
 
 % SKILLS
 \section{Technical Skills}
-\begin{tabular}{@{}p{2.8cm}@{}p{\dimexpr\textwidth-2.8cm\relax}@{}}
-\textbf{Languages:}      & Python, Java, C\#, C/C++, TypeScript, Dart, MATLAB, SQL \\
-\textbf{Web/Mobile:}  & Next.js, React, Vue.js, Angular, Flutter, HTML/CSS, Node.js \\
-\textbf{DevOps:}         & Docker, GitHub Actions (CI/CD), Railway, Cloudflare R2, Firebase, Google Cloud Platform, Azure DevOps \\
-\textbf{AI/ML:}          & NVIDIA TAO, OCRNet, vLLM, SGLang, Large Language Models, Computer Vision, DirectML \\
-\textbf{Databases:}      & PostgreSQL, Prisma ORM, Firestore, MySQL \\
-\textbf{Tools:}          & Git, OpenCode, Visual Studio Code, Vim, Android Studio, Figma, Proxmox, Virtual Machines, GitHub Copilot \\
-\textbf{Hardware:}       & Raspberry Pi, ESP32, 3D Printing Design (OnShape), PixHawk, ArduPilot, Sixfab LTE \\
+\begin{tabular}{@{}p{3cm}@{}p{\dimexpr\textwidth-3cm\relax}@{}}
+\textbf{Backend \& API:}      & Python, FastAPI, SpringBoot, RESTful API Design, C++, SQL \\
+\textbf{Databases:}           & PostgreSQL, Prisma ORM, MySQL, Firestore, Data Modeling \\
+\textbf{DevOps:}              & Docker, Kubernetes (Working Knowledge), GitHub Actions (CI/CD), GitLab CI/CD, Linux, Google Cloud Platform \\
+\textbf{AI-Assisted Dev:}     & GitHub Copilot, OpenCode (Multi-Agent Orchestration), Claude Code \\
+\textbf{Security:}            & Role-Based Access Control (RBAC), NextAuth.js, API Gateway Patterns, Cloudflare R2 \\
+\textbf{Languages (Other):}   & Java, C\#, C, TypeScript, Dart, HTML/CSS \\
 \end{tabular}
 
 % EXPERIENCE
@@ -77,84 +76,59 @@
 
 \experience{Embedded Software Engineer}{Waygate Technologies (Baker Hughes)}{Skaneateles, NY}{Jul 2025 - Dec 2025}
 \begin{bullets}
-  \item Engineered automated data processing and CI/CD pipelines to track production quality metrics, reducing manual inspection overhead
-  \item Trained OCRNet with NVIDIA TAO to detect defects and low-quality display outputs in industrial inspection workflows
+  \item Engineered automated data processing and Git-based CI/CD pipelines to track production quality metrics, reducing manual inspection overhead and enforcing software engineering best practices
+  \item Processed, modeled, and analyzed large-scale industrial inspection data to optimize backend pipeline data flow and system reliability
+  \item Deployed Python-driven automated test cases for system validation, improving regression coverage for build releases across distributed environments
   \item Built and deployed computer vision models into production testing environments using DirectML and C++ inference pipelines
-  \item Developed 4 automation test cases for pipeline validation, improving regression coverage for build releases
-  \item Processed and analyzed large-scale inspection data to identify failure patterns and optimize model accuracy
-  \item Leveraged GitHub Copilot to accelerate C++ inference pipeline development and automation scripts
+  \item Leveraged GitHub Copilot to accelerate development of C++ inference pipelines and complex data automation scripts, maintaining comprehensive code documentation
 \end{bullets}
-\textit{Key Skills:} Python, C++, DirectML, NVIDIA TAO, Computer Vision, CI/CD, GitHub Copilot\par
+\textit{Key Skills:} Python, C++, Data Pipelines, Automation Testing, CI/CD, GitHub Copilot\par
 
 \experience{Jr. Software Developer}{Tive Technology}{Remote}{Jun 2024 - Sep 2024}
 \begin{bullets}
-  \item Developed 4 mobile app features using Flutter and Android Studio
-  \item Designed 6 clean, responsive UI pages following Material Design guidelines embedded in the production app
-  \item Built backend services with Firebase including Firestore data modeling, Authentication, and Security Rules
-  \item Developed and maintained RESTful APIs with SpringBoot for server-side business logic
+  \item Developed and maintained robust RESTful APIs using SpringBoot for server-side business logic, optimizing backend database interactions
+  \item Designed and implemented secure backend services including Firestore data modeling, Authentication, and Security Rules
+  \item Built 4 mobile user-facing features with Flutter, reaching 1,000+ active users
+  \item Assisted in platform reliability testing and debugging backend services to meet multi-user performance guidelines
 \end{bullets}
-\textit{Key Skills:} Flutter, Dart, Firebase, Firestore, RESTful APIs, SpringBoot, Android Studio, GitHub Copilot\par
+\textit{Key Skills:} RESTful APIs, Python, SpringBoot, Firestore, Data Modeling, Backend Service Architecture, GitHub Copilot\par
 
-\experience{Research Assistant}{RIT CAIR Lab}{Rochester, NY}{Sep 2023 - May 2024}
+\experience{Research Assistant}{RIT CAIR Lab (Computational Accessibility \& Inclusion Research)}{Rochester, NY}{Sep 2023 - May 2024}
 \begin{bullets}
-  \item Implemented a real-time transcription web service integrating Google Cloud Speech-to-Text with prosody and emotion analysis to assist deaf and hard-of-hearing users
-  \item Built RESTful API layer for captioning service and containerized the application with Docker for deployment
-  \item Collected and analyzed experiment data comparing traditional vs.\ affective captioning systems for accessibility research
-  \item Built the frontend interface using React and Vue.js for live captioning visualization
+  \item Containerized a real-time data-processing web application using Docker, ensuring reproducible deployment across Linux-based environments in a collaborative scientific research setting
+  \item Built a scalable RESTful API layer to handle high-throughput live transcription and data stream processing for accessibility research
+  \item Supported multidisciplinary research workflows by collecting, structuring, and analyzing experimental data sets comparing traditional vs. affective captioning systems
+  \item Developed frontend interfaces using React and Vue.js for live captioning visualization
 \end{bullets}
-\textit{Key Skills:} Google Cloud Platform, Speech-to-Text, RESTful APIs, Docker, React, Vue.js, Python, GitHub Copilot\par
-
-%\experience{Research Assistant}{RIT Global Cybersecurity Institute}{Rochester, NY}{Sep 2022 - Jul 2023}
-%\begin{bullets}
-%  \item Performed statistical analysis and processing on MITRE threat alerts to identify security patterns
-%  \item Set up space cyber-physical simulations with NS-3 for satellite communication and motion modeling
-%  \item Analyzed real-time satellite motion and communication systems using MATLAB and C++
-%\end{bullets}
-%
-%\experience{Research Intern}{Tufts University}{Medford, MA}{May 2022 - Jul 2022}
-%\begin{bullets}
-%  \item Optimized properties of novel polymers using gradient descent algorithms in MATLAB and C++
-%  \item Applied object-oriented class structure and documentation practices to the Morpho-Lang compiler project
-%  \item Solved compiler and modular design problems for Morpho-Lang, an open-source scientific computing language
-%  \item Assembled a research poster presented to material science experts
-%\end{bullets}
+\textit{Key Skills:} Python, RESTful API Design, Docker, Google Cloud Platform, Linux, GitHub Copilot, React, Vue.js\par
 
 % PROJECTS
 \section{Projects}
 
-\project{Full-Stack E-Commerce Platform}{Personal Project}{Spokane, WA}{Jan 2026 - Present}
+\project{Full-Stack Data \& E-Commerce Platform}{Personal Project}{Spokane, WA}{Jan 2026 - Present}
 \begin{bullets}
-  \item Architected a production-ready full-stack e-commerce platform with Next.js 14, TypeScript, and PostgreSQL (Prisma ORM)
-  \item Containerized with Docker multi-stage builds and deployed on Railway with automated CI/CD via GitHub Actions
-  \item Integrated Cloudflare R2 (S3-compatible) for storage and built RESTful API layer handling authentication, cart management, and order lifecycle
-  \item Orchestrated multi-agent development with OpenCode and opencode-ensemble, leveraging GitHub Copilot across agents for accelerated delivery
-  \item Advanced agent/worktree isolation patterns for secure parallel software engineering team orchestration
+  \item Architected a production-ready backend with TypeScript, PostgreSQL, and Prisma ORM for relational data management and API service layer
+  \item Implemented secure authentication and Role-Based Access Control (RBAC) patterns handling multi-tier user lifecycles, cart management, and API routing
+  \item Containerized applications using Docker multi-stage builds and deployed with automated CI/CD via GitHub Actions
+  \item Integrated Cloudflare R2 object storage with API gateway patterns for rate limiting, routing, and asset management
+  \item Orchestrated multi-agent development workflows using OpenCode, delivering features via AI-assisted parallel engineering with human-in-the-loop code review
 \end{bullets}
-\textit{Key Skills:} Next.js, TypeScript, PostgreSQL, Prisma ORM, Docker, CI/CD, Cloudflare R2, NextAuth.js, OpenCode, GitHub Copilot, Agent Orchestration\par
+\textit{Key Skills:} TypeScript, PostgreSQL, Prisma ORM, Docker, CI/CD, RBAC, Cloudflare R2, OpenCode, GitHub Copilot, API Gateway\par
 
 \project{NeuralCube - Open Source Autonomous Robot}{Collaborator (with Chanel F. Cheng)}{Remote}{2024 - Present}
 \begin{bullets}
-  \item Collaborated on an open-source autonomous robot orchestrated by multi-agent LLMs for natural interaction and transparent reasoning
-  \item Deployed LLM inference serving using vLLM and SGLang for real-time model serving on the robot
-  \item Contributed to the digital twin system that maintains a continuously updated self-model for simulation-based reasoning
-  \item Integrated computer vision pipelines for visual perception and navigation in real-world environments
+  \item Contributed to an open-source autonomous system orchestrated by multi-agent Large Language Models (LLMs) for real-time data ingestion and processing
+  \item Deployed efficient LLM inference serving using vLLM and SGLang on Linux environments, prioritizing low-latency backend responses
+  \item Worked collaboratively in a team environment utilizing Git for version control, code documentation, and systemic debugging
 \end{bullets}
-\textit{Key Skills:} Python, vLLM, SGLang, Multi-Agent Systems, Computer Vision, Robotics
+\textit{Key Skills:} Python, Linux, vLLM, SGLang, Multi-Agent Systems, LLM Inference\par
 
 \project{4G LTE Unlimited Distance Drone}{Personal Project}{Rochester, NY}{Aug 2023 - Dec 2024}
 \begin{bullets}
-  \item Built a fully programmable 4G LTE drone using Raspberry Pi with internet-based communication for beyond-visual-line-of-sight operation
+  \item Built a programmable 4G LTE drone using Raspberry Pi with internet-based communication for beyond-visual-line-of-sight operation
   \item Implemented server communication for real-time image segmentation and autonomous navigation commands
-  \item Integrated PixHawk flight controller with ArduPilot for stabilized flight and Sixfab 4G LTE cellular hat for connectivity
+  \item Integrated PixHawk flight controller with ArduPilot and Sixfab 4G LTE cellular hat
 \end{bullets}
-\textit{Key Skills:} Python, Raspberry Pi, ArduPilot, PixHawk, Computer Vision, IoT
-
-
-%\section{Leadership \& Community}
-%\subsection{\texorpdfstring{\makebox[\linewidth][s]{Computer Science House (CSH)\hfill\normalfont\itshape Aug 2021 - Present}}{Computer Science House (CSH)}}
-%Active member of RIT's CS-focused living-learning community. Hosted 5 technical seminars and workshops on DevOps, Linux administration, and software development to mentor peers and spread knowledge across the community.
-%
-%\subsection{\texorpdfstring{\makebox[\linewidth][s]{RIT Artificial Intelligence Club\hfill\normalfont\itshape Aug 2022 - Present}}{RIT Artificial Intelligence Club}}
-%Member of AI enthusiast community. Explore active research areas in AI/ML with fellow students and collaborate on group projects. Participated in discussions on large language models, computer vision, and autonomous systems.
+\textit{Key Skills:} Python, Raspberry Pi, Computer Vision, IoT\par
 
 \end{document}
