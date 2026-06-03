@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yiyuan (Steve) Wufeng | My Journey</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
 </head>
@@ -37,37 +40,20 @@
 
     <div class="container">
         <h2 class="section-title reveal" id="about"><i class="fas fa-user-circle"></i> Get to Know Me</h2>
-        <div class="tabs-wrapper reveal">
-            <nav class="tab-nav">
-                <a class="tab-btn" href="#tab-who">Who Am I?</a>
-                <!-- <a class="tab-btn" href="#tab-ethics">Ethics &amp; Values</a>
-                <a class="tab-btn" href="#tab-worldview">World View</a>
-                <a class="tab-btn" href="#tab-story">My Story</a> -->
-            </nav>
-            <div class="tab-panels">
-
-                <!-- WHO AM I -->
-                <div class="tab-panel" id="tab-who">
-                    <p class="panel-title"></p>
-                    <div class="stub-card">
-                        <p class="stub-question">Who am I?</p>
-                        <!-- <p class="stub-hint">If someone at a coffee shop asked "so, what do you do?" — what would you actually say? Go beyond the job title and the major.</p> -->
-                        <p class="stub-answer">I am a graduating CS student who cares about creating meaningful impact through technology. Impact doesn't have to be for the masses; it can be for a single person or the people I care about. I aim to create a community where everyone cares about others' well-being and happiness.</p>
-                    </div>
-                    <div class="stub-card">
-                        <p class="stub-question">Fun Facts</p>
-                        <!-- <p class="stub-hint">What's something about you that reliably surprises people? A hidden hobby, an unexpected background, an unusual skill or obsession?</p> -->
-                        <p class="stub-answer">I was born in Venezuela, completed my primary education (grades 1–7) in China, and have navigated my secondary and higher education in the U.S. Living across three continents as a hard-of-hearing individual has given me wide world view.</p>
-                    </div>
-                    <div class="stub-card">
-                        <p class="stub-question">Beyond the résumé</p>
-                        <!-- <p class="stub-hint">What important part of you doesn't show up in a job application? A value, a personality trait, a life experience that shaped you?</p> -->
-                        <p class="stub-answer">My time at RIT’s National Technical Institute for the Deaf (NTID) and the Computer Science House (CSH) shaped my belief that innovation is most effective when it is inclusive and for the common good. I am driven by the desire to create environments where everyone feels a genuine sense of belonging and empowerment.</p>
-                    </div>
-                </div>
-
-            </div><!-- .tab-panels -->
-        </div><!-- .tabs-wrapper -->
+        <div class="about-cards reveal">
+            <div class="stub-card">
+                <p class="stub-question">Who am I?</p>
+                <p class="stub-answer">I am a graduating CS student who cares about creating meaningful impact through technology. Impact doesn't have to be for the masses; it can be for a single person or the people I care about. I aim to create a community where everyone cares about others' well-being and happiness.</p>
+            </div>
+            <div class="stub-card">
+                <p class="stub-question">Fun Facts</p>
+                <p class="stub-answer">I was born in Venezuela, completed my primary education (grades 1–7) in China, and have navigated my secondary and higher education in the U.S. Living across three continents as a hard-of-hearing individual has given me wide world view.</p>
+            </div>
+            <div class="stub-card">
+                <p class="stub-question">Beyond the résumé</p>
+                <p class="stub-answer">My time at RIT's National Technical Institute for the Deaf (NTID) and the Computer Science House (CSH) shaped my belief that innovation is most effective when it is inclusive and for the common good. I am driven by the desire to create environments where everyone feels a genuine sense of belonging and empowerment.</p>
+            </div>
+        </div>
 
         <h2 class="section-title reveal" id="work"><i class="fas fa-briefcase"></i> Work Experience</h2>
         <main class="timeline">
@@ -119,55 +105,56 @@
 
         <h2 class="section-title reveal" id="projects"><i class="fas fa-rocket"></i> Projects & Experiments</h2>
         
-        <main class="timeline">
-            <div class="timeline-item reveal project">
-                <div class="date">Jan 2026 - Present </div>
-                <div class="content">
+        <div class="project-grid">
+            <div class="project-card reveal">
+                <div class="project-card-header">
+                    <span class="project-date">Jan 2026 — Present</span>
                     <h3>Full-Stack E-Commerce Platform</h3>
-                    <p>Architected a production-ready full-stack e-commerce platform with Next.js 14, TypeScript, and PostgreSQL (Prisma ORM). Containerized with Docker multi-stage builds and deployed on Railway with automated CI/CD via GitHub Actions. Integrated Cloudflare R2 for storage and built RESTful API layer handling authentication, cart management, and order lifecycle. Orchestrated multi-agent development with OpenCode and opencode-ensemble, leveraging GitHub Copilot across agents for accelerated delivery. Implemented agent/worktree isolation patterns for secure parallel software engineering team orchestration.</p>
-                    <div class="project-links">
-                        <a href="https://github.com/SteveWufeng/E-Commerce" target="_blank"><i class="fab fa-github"></i> Source</a>
-                        <a href="https://e-commerce-production-c2ee.up.railway.app/" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                    </div>
-                    <span class="tags">Next.js • TypeScript • PostgreSQL • Prisma ORM • Docker • CI/CD • Cloudflare R2 • NextAuth.js • OpenCode • GitHub Copilot • Agent Orchestration</span>
                 </div>
-            </div>
-            <div class="timeline-item reveal project">
-                <div class="date">Aug 2023 - Dec 2024 </div>
-                <div class="content">
-                    <h3>4G LTE Unlimited Distance Drone </h3>
-                    <p>Built a fully programmable 4G LTE drone using Raspberry Pi with internet-based communication for beyond-visual-line-of-sight operation. Implemented server communication for real-time image segmentation and autonomous navigation commands. Integrated PixHawk flight controller with ArduPilot for stabilized flight and Sixfab 4G LTE cellular hat for connectivity.</p>
-                    <span class="tags">Python • Raspberry Pi • ArduPilot • PixHawk • Computer Vision • IoT</span>
+                <p>Architected a production-ready full-stack e-commerce platform with Next.js 14, TypeScript, and PostgreSQL (Prisma ORM). Containerized with Docker multi-stage builds and deployed on Railway with automated CI/CD via GitHub Actions. Integrated Cloudflare R2 for storage and built RESTful API layer handling authentication, cart management, and order lifecycle. Orchestrated multi-agent development with OpenCode and opencode-ensemble, leveraging GitHub Copilot across agents for accelerated delivery.</p>
+                <div class="project-links">
+                    <a href="https://github.com/SteveWufeng/E-Commerce" target="_blank"><i class="fab fa-github"></i> Source</a>
+                    <a href="https://e-commerce-production-c2ee.up.railway.app/" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
                 </div>
+                <span class="tags">Next.js • TypeScript • PostgreSQL • Prisma ORM • Docker • CI/CD • Cloudflare R2 • NextAuth.js • OpenCode • GitHub Copilot • Agent Orchestration</span>
             </div>
 
-            <div class="timeline-item reveal project">
-                <div class="date">2024 — Present</div>
-                <div class="content">
-                    <h3>NeuralCube — Open Source Autonomous Robot</h3>
-                    <p>Collaborated on an open-source autonomous robot orchestrated by multi-agent LLMs for natural interaction and transparent reasoning. Deployed LLM inference serving using vLLM and SGLang for real-time model serving. Contributed to the digital twin system that maintains a continuously updated self-model for simulation-based reasoning. Integrated computer vision pipelines for visual perception and navigation.</p>
-                    <div class="project-links">
-                        <a href="https://github.com/chanelfcheng/NeuralCube" target="_blank"><i class="fab fa-github"></i> Source</a>
-                        <a href="https://chanelfcheng.github.io/NeuralCube-Docs/" target="_blank"><i class="fas fa-external-link-alt"></i> Docs</a>
-                    </div>
-                    <span class="tags">Python • vLLM • SGLang • Multi-Agent Systems • Computer Vision • Robotics</span>
+            <div class="project-card reveal">
+                <div class="project-card-header">
+                    <span class="project-date">Aug 2023 — Dec 2024</span>
+                    <h3>4G LTE Unlimited Distance Drone</h3>
                 </div>
+                <p>Built a fully programmable 4G LTE drone using Raspberry Pi with internet-based communication for beyond-visual-line-of-sight operation. Implemented server communication for real-time image segmentation and autonomous navigation commands. Integrated PixHawk flight controller with ArduPilot for stabilized flight and Sixfab 4G LTE cellular hat for connectivity.</p>
+                <span class="tags">Python • Raspberry Pi • ArduPilot • PixHawk • Computer Vision • IoT</span>
             </div>
-        </main>
+
+            <div class="project-card reveal">
+                <div class="project-card-header">
+                    <span class="project-date">2024 — Present</span>
+                    <h3>NeuralCube — Open Source Autonomous Robot</h3>
+                </div>
+                <p>Collaborated on an open-source autonomous robot orchestrated by multi-agent LLMs for natural interaction and transparent reasoning. Deployed LLM inference serving using vLLM and SGLang for real-time model serving. Contributed to the digital twin system that maintains a continuously updated self-model for simulation-based reasoning. Integrated computer vision pipelines for visual perception and navigation.</p>
+                <div class="project-links">
+                    <a href="https://github.com/chanelfcheng/NeuralCube" target="_blank"><i class="fab fa-github"></i> Source</a>
+                    <a href="https://chanelfcheng.github.io/NeuralCube-Docs/" target="_blank"><i class="fas fa-external-link-alt"></i> Docs</a>
+                </div>
+                <span class="tags">Python • vLLM • SGLang • Multi-Agent Systems • Computer Vision • Robotics</span>
+            </div>
+        </div>
 
         <h2 class="section-title reveal" id="education"><i class="fas fa-graduation-cap"></i> Education</h2>
-        <div class="timeline-item reveal" style="padding-left: 40px; margin-bottom: 30px;">
-            <div class="content">
+        <div class="edu-card reveal">
+            <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
+            <div class="edu-body">
                 <h3>Rochester Institute of Technology</h3>
-                <p class="date" style="margin: 4px 0 8px 0; text-transform: none; font-size: 0.9rem;">Rochester, NY &mdash; Aug 2021 &mdash; May 2026</p>
-                <p><strong>Bachelor of Science in Computer Science</strong>, Minor: Mathematics &mdash; GPA: 3.85/4.00</p>
-
+                <p class="edu-meta">Rochester, NY &mdash; Aug 2021 &mdash; May 2026</p>
+                <p class="edu-degree"><strong>Bachelor of Science in Computer Science</strong>, Minor: Mathematics <span class="edu-gpa">GPA: 3.85/4.00</span></p>
             </div>
         </div>
 
         <h2 class="section-title reveal" id="skills"><i class="fas fa-cogs"></i> Technical Skills</h2>
         <div class="reveal" style="margin-bottom: 60px;">
-            <div class="skills-grid" style="display: grid; grid-template-columns: auto 1fr; gap: 8px 16px; background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+            <div class="skills-grid">
                 <strong>Languages:</strong> <span>Python, Java, C#, C/C++, TypeScript, Dart, MATLAB, SQL</span>
                 <strong>Web &amp; Mobile:</strong> <span>Next.js, React, Vue.js, Angular, Flutter, HTML/CSS, Node.js</span>
                 <strong>DevOps:</strong> <span>Docker, GitHub Actions (CI/CD), Railway, Cloudflare R2, Firebase, Google Cloud Platform, Azure DevOps</span>
@@ -210,22 +197,6 @@
         }, { threshold: 0.15 });
 
         document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
-
-        // Highlight the nav link for the section currently in view
-        const panels = document.querySelectorAll('.tab-panel');
-        const navLinks = document.querySelectorAll('.tab-btn');
-
-        const navObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    navLinks.forEach(a => a.classList.remove('active'));
-                    const link = document.querySelector('.tab-btn[href="#' + entry.target.id + '"]');
-                    if (link) link.classList.add('active');
-                }
-            });
-        }, { rootMargin: '-20% 0px -70% 0px' });
-
-        panels.forEach(p => navObserver.observe(p));
 
         // ── Sidebar scroll spy ──
         const sidebarLinks = document.querySelectorAll('.sidebar-link');
