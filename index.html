@@ -18,11 +18,11 @@
             <span class="sidebar-name">Steve</span>
         </div>
         <a href="#" class="sidebar-link active" data-target="home"><i class="fas fa-home"></i> Home</a>
+        <a href="#skills" class="sidebar-link" data-target="skills"><i class="fas fa-cogs"></i> Skills</a>
         <a href="#about" class="sidebar-link" data-target="about"><i class="fas fa-user-circle"></i> About</a>
         <a href="#work" class="sidebar-link" data-target="work"><i class="fas fa-briefcase"></i> Work</a>
         <a href="#projects" class="sidebar-link" data-target="projects"><i class="fas fa-rocket"></i> Projects</a>
         <a href="#education" class="sidebar-link" data-target="education"><i class="fas fa-graduation-cap"></i> Education</a>
-        <a href="#skills" class="sidebar-link" data-target="skills"><i class="fas fa-cogs"></i> Skills</a>
         <a href="#community" class="sidebar-link" data-target="community"><i class="fas fa-users"></i> Community</a>
     </nav>
 
@@ -41,6 +41,19 @@
     </header>
 
     <div class="container">
+        <h2 class="section-title reveal" id="skills"><i class="fas fa-cogs"></i> Technical Skills</h2>
+        <div class="reveal" style="margin-bottom: 60px;">
+            <div class="skills-grid">
+                <strong>Languages:</strong> <span>Python, Java, C#, C/C++, TypeScript, Dart, MATLAB, SQL</span>
+                <strong>Web &amp; Mobile:</strong> <span>Next.js, React, Vue.js, Angular, Flutter, HTML/CSS, Node.js</span>
+                <strong>DevOps:</strong> <span>Docker, GitHub Actions (CI/CD), Railway, Cloudflare R2, Firebase, Google Cloud Platform, Azure DevOps</span>
+                <strong>AI/ML:</strong> <span>NVIDIA TAO, OCRNet, vLLM, SGLang, Large Language Models, Computer Vision, DirectML</span>
+                <strong>Databases:</strong> <span>PostgreSQL, Prisma ORM, Firestore, MySQL</span>
+                <strong>Tools:</strong> <span>Git, OpenCode, VS Code, Vim, Android Studio, Figma, Proxmox, Virtual Machines, GitHub Copilot</span>
+                <strong>Hardware:</strong> <span>Raspberry Pi, ESP32, 3D Printing (OnShape), PixHawk, ArduPilot, Sixfab LTE</span>
+            </div>
+        </div>
+
         <h2 class="section-title reveal" id="about"><i class="fas fa-user-circle"></i> Get to Know Me</h2>
         <div class="about-cards reveal">
             <div class="stub-card">
@@ -154,19 +167,6 @@
             </div>
         </div>
 
-        <h2 class="section-title reveal" id="skills"><i class="fas fa-cogs"></i> Technical Skills</h2>
-        <div class="reveal" style="margin-bottom: 60px;">
-            <div class="skills-grid">
-                <strong>Languages:</strong> <span>Python, Java, C#, C/C++, TypeScript, Dart, MATLAB, SQL</span>
-                <strong>Web &amp; Mobile:</strong> <span>Next.js, React, Vue.js, Angular, Flutter, HTML/CSS, Node.js</span>
-                <strong>DevOps:</strong> <span>Docker, GitHub Actions (CI/CD), Railway, Cloudflare R2, Firebase, Google Cloud Platform, Azure DevOps</span>
-                <strong>AI/ML:</strong> <span>NVIDIA TAO, OCRNet, vLLM, SGLang, Large Language Models, Computer Vision, DirectML</span>
-                <strong>Databases:</strong> <span>PostgreSQL, Prisma ORM, Firestore, MySQL</span>
-                <strong>Tools:</strong> <span>Git, OpenCode, VS Code, Vim, Android Studio, Figma, Proxmox, Virtual Machines, GitHub Copilot</span>
-                <strong>Hardware:</strong> <span>Raspberry Pi, ESP32, 3D Printing (OnShape), PixHawk, ArduPilot, Sixfab LTE</span>
-            </div>
-        </div>
-
         <h2 class="section-title reveal" id="community"><i class="fas fa-users"></i> Leadership &amp; Community</h2>
         <div class="timeline" style="margin-bottom: 60px;">
             <div class="timeline-item reveal">
@@ -204,7 +204,7 @@
 
         // ── Sidebar scroll spy ──
         const sidebarLinks = document.querySelectorAll('.sidebar-link');
-        const sections = ['home', 'about', 'work', 'projects', 'education', 'skills', 'community']
+        const sections = ['home', 'skills', 'about', 'work', 'projects', 'education', 'community']
             .map(id => document.getElementById(id));
 
         const sidebarObserver = new IntersectionObserver((entries) => {
