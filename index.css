@@ -140,11 +140,119 @@ body {
     margin-top: 20px;
 }
 
+/* ── Sidebar Navigation ── */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 220px;
+    height: 100vh;
+    background: white;
+    border-right: 1px solid var(--line);
+    display: flex;
+    flex-direction: column;
+    padding: 24px 0;
+    z-index: 200;
+    overflow-y: auto;
+}
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 20px 20px;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 12px;
+}
+
+.sidebar-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.sidebar-name {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--text);
+}
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    color: #888;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: color 0.2s, background 0.2s;
+    border-left: 3px solid transparent;
+}
+
+.sidebar-link:hover {
+    color: var(--text);
+    background: #f5f4f1;
+}
+
+.sidebar-link.active {
+    color: var(--accent);
+    background: #f0efec;
+    border-left-color: var(--accent);
+    font-weight: 600;
+}
+
+.sidebar-link i {
+    width: 18px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* shift main content right to accommodate sidebar */
+.hero,
+.container,
+footer {
+    margin-left: 220px;
+}
+
 footer {
     text-align: center;
     padding: 60px;
     color: #888;
     font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 12px 16px;
+        border-right: none;
+        border-bottom: 1px solid var(--line);
+        gap: 4px;
+    }
+    .sidebar-header {
+        display: none;
+    }
+    .sidebar-link {
+        padding: 6px 12px;
+        font-size: 0.78rem;
+        border-left: none;
+        border-bottom: 2px solid transparent;
+    }
+    .sidebar-link.active {
+        border-left-color: transparent;
+        border-bottom-color: var(--accent);
+    }
+    .hero,
+    .container,
+    footer {
+        margin-left: 0;
+    }
 }
 
 /* ── Get to Know Me Tabs ── */

@@ -9,7 +9,21 @@
 </head>
 <body>
 
-    <header class="hero">
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <img src="https://avatars.githubusercontent.com/u/86623538?v=4" alt="Steve" class="sidebar-avatar">
+            <span class="sidebar-name">Steve</span>
+        </div>
+        <a href="#" class="sidebar-link active" data-target="home"><i class="fas fa-home"></i> Home</a>
+        <a href="#about" class="sidebar-link" data-target="about"><i class="fas fa-user-circle"></i> About</a>
+        <a href="#work" class="sidebar-link" data-target="work"><i class="fas fa-briefcase"></i> Work</a>
+        <a href="#projects" class="sidebar-link" data-target="projects"><i class="fas fa-rocket"></i> Projects</a>
+        <a href="#education" class="sidebar-link" data-target="education"><i class="fas fa-graduation-cap"></i> Education</a>
+        <a href="#skills" class="sidebar-link" data-target="skills"><i class="fas fa-cogs"></i> Skills</a>
+        <a href="#community" class="sidebar-link" data-target="community"><i class="fas fa-users"></i> Community</a>
+    </nav>
+
+    <header class="hero" id="home">
         <img src="https://avatars.githubusercontent.com/u/86623538?v=4" alt="Steve" class="profile-pic">
         <h1>Hey, I'm Steve. 👋</h1>
         <p class="bio">Computer Science graduating senior at RIT. I graduate in May 2026 with a 3.85 GPA, seeking full-time software engineering roles. U.S. Citizen.</p>
@@ -22,7 +36,7 @@
     </header>
 
     <div class="container">
-        <h2 class="section-title reveal"><i class="fas fa-user-circle"></i> Get to Know Me</h2>
+        <h2 class="section-title reveal" id="about"><i class="fas fa-user-circle"></i> Get to Know Me</h2>
         <div class="tabs-wrapper reveal">
             <nav class="tab-nav">
                 <a class="tab-btn" href="#tab-who">Who Am I?</a>
@@ -55,7 +69,7 @@
             </div><!-- .tab-panels -->
         </div><!-- .tabs-wrapper -->
 
-        <h2 class="section-title reveal"><i class="fas fa-briefcase"></i> Work Experience</h2>
+        <h2 class="section-title reveal" id="work"><i class="fas fa-briefcase"></i> Work Experience</h2>
         <main class="timeline">
             <div class="timeline-item reveal">
                 <div class="date">Jul 2025 - Dec 2025 </div>
@@ -103,7 +117,7 @@
             </div>
         </main>
 
-        <h2 class="section-title reveal"><i class="fas fa-rocket"></i> Projects & Experiments</h2>
+        <h2 class="section-title reveal" id="projects"><i class="fas fa-rocket"></i> Projects & Experiments</h2>
         
         <main class="timeline">
             <div class="timeline-item reveal project">
@@ -141,7 +155,7 @@
             </div>
         </main>
 
-        <h2 class="section-title reveal"><i class="fas fa-graduation-cap"></i> Education</h2>
+        <h2 class="section-title reveal" id="education"><i class="fas fa-graduation-cap"></i> Education</h2>
         <div class="timeline-item reveal" style="padding-left: 40px; margin-bottom: 30px;">
             <div class="content">
                 <h3>Rochester Institute of Technology</h3>
@@ -151,7 +165,7 @@
             </div>
         </div>
 
-        <h2 class="section-title reveal"><i class="fas fa-cogs"></i> Technical Skills</h2>
+        <h2 class="section-title reveal" id="skills"><i class="fas fa-cogs"></i> Technical Skills</h2>
         <div class="reveal" style="margin-bottom: 60px;">
             <div class="skills-grid" style="display: grid; grid-template-columns: auto 1fr; gap: 8px 16px; background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
                 <strong>Languages:</strong> <span>Python, Java, C#, C/C++, TypeScript, Dart, MATLAB, SQL</span>
@@ -164,7 +178,7 @@
             </div>
         </div>
 
-        <h2 class="section-title reveal"><i class="fas fa-users"></i> Leadership &amp; Community</h2>
+        <h2 class="section-title reveal" id="community"><i class="fas fa-users"></i> Leadership &amp; Community</h2>
         <div class="timeline" style="margin-bottom: 60px;">
             <div class="timeline-item reveal">
                 <div class="date">Aug 2021 - Present </div>
@@ -212,6 +226,25 @@
         }, { rootMargin: '-20% 0px -70% 0px' });
 
         panels.forEach(p => navObserver.observe(p));
+
+        // ── Sidebar scroll spy ──
+        const sidebarLinks = document.querySelectorAll('.sidebar-link');
+        const sections = ['home', 'about', 'work', 'projects', 'education', 'skills', 'community']
+            .map(id => document.getElementById(id));
+
+        const sidebarObserver = new IntersectionObserver((entries) => {
+            let activeId = null;
+            entries.forEach(entry => {
+                if (entry.isIntersecting) activeId = entry.target.id;
+            });
+            if (activeId) {
+                sidebarLinks.forEach(link => {
+                    link.classList.toggle('active', link.dataset.target === activeId);
+                });
+            }
+        }, { rootMargin: '-30% 0px -60% 0px' });
+
+        sections.forEach(s => { if (s) sidebarObserver.observe(s); });
     </script>
 </body>
 </html>
