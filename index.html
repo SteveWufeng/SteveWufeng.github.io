@@ -31,7 +31,7 @@
     <header class="hero" id="home">
         <img src="https://avatars.githubusercontent.com/u/86623538?v=4" alt="Steve" class="profile-pic">
         <h1>Hey, I'm Steve. 👋</h1>
-        <p class="bio">Computer Science graduate from RIT (May 2026, 3.85 GPA). Seeking full-time software engineering roles. U.S. Citizen.</p>
+        <p class="bio">Computer Science graduate from RIT (May 2026, 3.85 GPA). Cloud-Native &amp; AI-Assisted Development. U.S. Citizen.</p>
         <div class="social-links">
             <a href="mailto:yfeng219@gmail.com"><i class="fas fa-envelope"></i></a>
             <a href="https://linkedin.com/in/yiyuan-wufeng/" target="_blank"><i class="fab fa-linkedin"></i></a>
@@ -44,13 +44,12 @@
         <h2 class="section-title reveal" id="skills"><i class="fas fa-cogs"></i> Technical Skills</h2>
         <div class="reveal" style="margin-bottom: 60px;">
             <div class="skills-grid">
-                <strong>Backend &amp; API:</strong> <span>Python, FastAPI, SpringBoot, RESTful API Design, C++, SQL</span>
-                <strong>Databases:</strong> <span>PostgreSQL, Prisma ORM, MySQL, Firestore, Data Modeling</span>
-                <strong>DevOps:</strong> <span>Docker, Kubernetes (Working Knowledge), GitHub Actions (CI/CD), GitLab CI/CD, Linux, Google Cloud Platform, Cloudflare R2</span>
-                <strong>AI-Assisted Dev:</strong> <span>GitHub Copilot, OpenCode (Multi-Agent Orchestration), Claude Code</span>
-                <strong>Security:</strong> <span>Role-Based Access Control (RBAC), NextAuth.js, API Gateway Patterns</span>
-                <strong>Languages:</strong> <span>Java, C#, C, TypeScript, Dart, HTML/CSS</span>
-                <strong>Frontend (Additional):</strong> <span>Next.js, React, Vue.js, Flutter, Node.js</span>
+                <strong>Languages:</strong> <span>Python, Java, C++, C#, C, TypeScript, Dart, HTML/CSS, SQL</span>
+                <strong>Frameworks:</strong> <span>FastAPI, SpringBoot, React, Vue.js, Flutter, Prisma ORM, NextAuth.js</span>
+                <strong>Databases:</strong> <span>PostgreSQL, MySQL, Firestore</span>
+                <strong>Cloud &amp; DevOps:</strong> <span>Docker, Kubernetes, GitHub Actions, GitLab CI/CD, Linux, GCP, Cloudflare R2</span>
+                <strong>AI Development &amp; Tools:</strong> <span>OpenCode (Multi-Agent Orchestration Framework), Claude Code, GitHub Copilot, vLLM, SGLang</span>
+                <strong>Core Competencies:</strong> <span>RESTful API Design, RBAC, API Gateway Patterns, Data Modeling, Computer Vision, Multi-Agent Systems, IoT</span>
             </div>
         </div>
 
@@ -77,10 +76,19 @@
         <h2 class="section-title reveal" id="work"><i class="fas fa-briefcase"></i> Work Experience</h2>
         <main class="timeline">
             <div class="timeline-item reveal">
+                <div class="date">Jan 2026 — Present</div>
+                <div class="content">
+                    <h3>Freelance Software Engineer @ Buho</h3>
+                    <p>Architected a production-grade backend with TypeScript, PostgreSQL, and Prisma ORM, achieving clean API separation and normalized relational data management. Implemented RBAC and authentication flows managing multi-tier user lifecycles, cart state, and protected API routing for production-scale e-commerce. Containerized the full stack with Docker multi-stage builds and deployed via Railway with automated CI/CD, reducing deployments from manual scripts to push-triggered pipelines. Integrated Cloudflare R2 behind API gateway patterns, enforcing rate limiting and efficient asset delivery for media-heavy workloads. Directed multi-agent AI development with OpenCode, guiding LLM agents to generate production code through human-in-the-loop validation.</p>
+                    <span class="tags">TypeScript • PostgreSQL • Prisma ORM • Docker • CI/CD • RBAC • Cloudflare R2 • OpenCode • GitHub Copilot • API Gateway</span>
+                </div>
+            </div>
+
+            <div class="timeline-item reveal">
                 <div class="date">Jul 2025 - Dec 2025 </div>
                 <div class="content">
                     <h3>Embedded Software Engineer @ Waygate Technologies (Baker Hughes) </h3>
-                    <p>Engineered automated data processing and Git-based CI/CD pipelines to track production quality metrics, reducing manual inspection overhead and enforcing software engineering best practices. Processed, modeled, and analyzed large-scale industrial inspection data to optimize backend pipeline data flow and system reliability. Deployed Python-driven automated test cases for system validation, improving regression coverage for build releases. Leveraged GitHub Copilot to accelerate C++ inference pipeline development and complex data automation scripts.</p>
+                    <p>Automated production quality tracking with CI/CD pipelines, providing actionable telemetry that cut manual inspection overhead and accelerated release validation. Processed and modeled large-scale industrial inspection data, optimizing backend pipeline throughput and improving production system reliability. Designed and deployed Python-driven test automation frameworks across distributed environments, increasing regression coverage and reducing post-release defects. Delivered computer vision models into production testing via DirectML and C++ inference pipelines, enabling real-time defect detection. Guided AI coding assistants (Copilot, Claude Code) to accelerate C++ inference development, critically reviewing and iterating on generated code to maintain quality and documentation standards.</p>
                     <span class="tags">Python • C++ • Data Pipelines • Automation Testing • CI/CD • GitHub Copilot</span>
                 </div>
             </div>
@@ -89,7 +97,7 @@
                 <div class="date">Jun 2024 - Sep 2024 </div>
                 <div class="content">
                     <h3>Jr. Software Engineer Intern @ Tive Technology </h3>
-                    <p>Developed and maintained robust RESTful APIs using SpringBoot for server-side business logic, optimizing backend database interactions. Designed and implemented secure backend services including Firestore data modeling, Authentication, and Security Rules. Built 4 mobile user-facing features with Flutter, reaching 1,000+ active users. Assisted in platform reliability testing and debugging backend services to meet multi-user performance guidelines.</p>
+                    <p>Built and optimized RESTful APIs with SpringBoot, reducing database query latency through streamlined data access patterns. Designed Firestore data models and security rules, enforcing secure multi-user access across the platform. Delivered 4 Flutter-based mobile features adopted by 1,000+ active users within the first quarter. Validated platform reliability through systematic load testing, ensuring consistent performance at scale under growing multi-user concurrency.</p>
                     <span class="tags">RESTful APIs • Python • SpringBoot • Firestore • Data Modeling • GitHub Copilot</span>
                 </div>
             </div>
@@ -98,7 +106,7 @@
                 <div class="date">Sep 2023 - May 2024 </div>
                 <div class="content">
                     <h3>Research Assistant @ RIT CAIR Lab </h3>
-                    <p>Containerized a real-time data-processing web application using Docker, ensuring reproducible deployment across Linux-based environments in a collaborative scientific research setting. Built a scalable RESTful API layer to handle high-throughput live transcription and data stream processing for accessibility research. Supported multidisciplinary research workflows by collecting, structuring, and analyzing experimental data sets. Developed frontend interfaces using React and Vue.js for live captioning visualization.</p>
+                    <p>Containerized real-time data-processing pipelines with Docker, enabling reproducible one-command deployments across heterogeneous Linux research environments. Architected a RESTful API layer handling high-throughput live transcription streams, supporting real-time accessibility research without data loss. Structured and analyzed comparative experimental datasets for affective vs. traditional captioning, producing actionable insights for accessibility research. Built interactive live captioning interfaces with React and Vue.js, enabling researchers to compare captioning modalities in real time.</p>
                     <span class="tags">Python • RESTful API Design • Docker • Google Cloud Platform • Linux • React • Vue.js • GitHub Copilot</span>
                 </div>
             </div>
@@ -127,15 +135,15 @@
         <div class="project-grid">
             <div class="project-card reveal">
                 <div class="project-card-header">
-                    <span class="project-date">Jan 2026 — Present</span>
-                    <h3>Full-Stack Data &amp; E-Commerce Platform</h3>
+                    <span class="project-date">2024 — Present</span>
+                    <h3>NeuralCube — Open Source Autonomous Robot</h3>
                 </div>
-                <p>Architected a production-ready backend with TypeScript, PostgreSQL, and Prisma ORM for relational data management and API service layer. Implemented secure authentication and Role-Based Access Control (RBAC) patterns handling multi-tier user lifecycles, cart management, and API routing. Containerized using Docker multi-stage builds and automated CI/CD via GitHub Actions. Integrated Cloudflare R2 object storage with API gateway patterns for rate limiting, routing, and asset management. Orchestrated multi-agent development workflows using OpenCode — each agent worked in an isolated sandboxed worktree with human-in-the-loop code review before merging.</p>
+                <p>Contributed to an open-source autonomous system using multi-agent LLM orchestration, evaluating and refining AI-generated orchestration logic for real-time data ingestion pipelines. Deployed vLLM and SGLang inference serving on Linux, achieving low-latency LLM responses for real-time autonomous decision-making. Collaborated in a distributed open-source team, driving code documentation standards and systematic debugging practices across Git-based workflows.</p>
                 <div class="project-links">
-                    <a href="https://github.com/SteveWufeng/E-Commerce" target="_blank"><i class="fab fa-github"></i> Source</a>
-                    <a href="https://e-commerce-production-c2ee.up.railway.app/" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                    <a href="https://github.com/chanelfcheng/NeuralCube" target="_blank"><i class="fab fa-github"></i> Source</a>
+                    <a href="https://chanelfcheng.github.io/NeuralCube-Docs/" target="_blank"><i class="fas fa-external-link-alt"></i> Docs</a>
                 </div>
-                <span class="tags">TypeScript • PostgreSQL • Prisma ORM • Docker • CI/CD • RBAC • Cloudflare R2 • API Gateway • OpenCode • GitHub Copilot</span>
+                <span class="tags">Python • vLLM • SGLang • Multi-Agent Systems • Computer Vision • Robotics</span>
             </div>
 
             <div class="project-card reveal">
@@ -145,19 +153,6 @@
                 </div>
                 <p>Built a fully programmable 4G LTE drone using Raspberry Pi with internet-based communication for beyond-visual-line-of-sight operation. Implemented server communication for real-time image segmentation and autonomous navigation commands. Integrated PixHawk flight controller with ArduPilot for stabilized flight and Sixfab 4G LTE cellular hat for connectivity.</p>
                 <span class="tags">Python • Raspberry Pi • ArduPilot • PixHawk • Computer Vision • IoT</span>
-            </div>
-
-            <div class="project-card reveal">
-                <div class="project-card-header">
-                    <span class="project-date">2024 — Present</span>
-                    <h3>NeuralCube — Open Source Autonomous Robot</h3>
-                </div>
-                <p>Contributed to an open-source autonomous system orchestrated by multi-agent LLMs for real-time data ingestion and processing. Deployed efficient LLM inference serving using vLLM and SGLang on Linux environments for low-latency backend responses. Worked collaboratively using Git for version control and systemic debugging.</p>
-                <div class="project-links">
-                    <a href="https://github.com/chanelfcheng/NeuralCube" target="_blank"><i class="fab fa-github"></i> Source</a>
-                    <a href="https://chanelfcheng.github.io/NeuralCube-Docs/" target="_blank"><i class="fas fa-external-link-alt"></i> Docs</a>
-                </div>
-                <span class="tags">Python • vLLM • SGLang • Multi-Agent Systems • Computer Vision • Robotics</span>
             </div>
         </div>
 
@@ -192,7 +187,7 @@
     </div>
 
     <footer>
-        <p>Updated June 02, 2026</p>
+        <p>Updated June 09, 2026</p>
     </footer>
 
     </div><!-- .main-content -->
