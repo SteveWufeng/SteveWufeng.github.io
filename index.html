@@ -24,6 +24,7 @@
         <a href="#projects" class="sidebar-link" data-target="projects"><i class="fas fa-rocket"></i> Projects</a>
         <a href="#education" class="sidebar-link" data-target="education"><i class="fas fa-graduation-cap"></i> Education</a>
         <a href="#community" class="sidebar-link" data-target="community"><i class="fas fa-users"></i> Community</a>
+        <a href="#archived" class="sidebar-link" data-target="archived"><i class="fas fa-archive"></i> Archived</a>
     </nav>
 
     <div class="main-content">
@@ -183,6 +184,40 @@
             </div>
         </div>
 
+    <h2 class="section-title reveal" id="archived"><i class="fas fa-archive"></i> Archived — Student Days</h2>
+        <div class="archived-intro reveal">
+            <p>Back in my early college years, I ran a blog about 3D printing as a teaching seminar. Here's what I was building and learning at the time.</p>
+        </div>
+
+        <div class="archived-grid">
+            <div class="archived-card reveal">
+                <div class="archived-card-header">
+                    <span class="archived-badge">Blog</span>
+                    <h3>How to 3D Print?</h3>
+                </div>
+                <p>A beginner-friendly seminar blog I wrote as a sophomore at RIT. Covers the full pipeline: how FDM printers work (layer-by-layer deposition), converting 3D models to Gcode with slicing software, and tips for getting started with your first print.</p>
+                <span class="tags">3D Printing • FDM • CAD • Gcode • Teaching</span>
+            </div>
+
+            <div class="archived-card reveal">
+                <div class="archived-card-header">
+                    <span class="archived-badge">Build</span>
+                    <h3>Persistence of Vision Display</h3>
+                </div>
+                <p>3D modeled and printed a custom spinning arm and enclosure for a POV display. Went through multiple failed iterations before getting it right — learned that iteration and patience are part of the process, not obstacles to it.</p>
+                <span class="tags">3D Modeling • Rapid Prototyping • Iterative Design</span>
+            </div>
+
+            <div class="archived-card reveal">
+                <div class="archived-card-header">
+                    <span class="archived-badge">Build</span>
+                    <h3>DIY Laptop Stand</h3>
+                </div>
+                <p>Designed and printed my own laptop stand to fix neck pain from hunching over a laptop all day. A simple practical project that made a real difference in my daily comfort — and a reminder that technology should serve the people using it.</p>
+                <span class="tags">Ergonomics • Practical Design • Personal Project</span>
+            </div>
+        </div>
+
     </div>
 
     <footer>
@@ -202,7 +237,7 @@
 
         // ── Sidebar scroll spy ──
         const sidebarLinks = document.querySelectorAll('.sidebar-link');
-        const sections = ['home', 'skills', 'about', 'work', 'projects', 'education', 'community']
+        const sections = ['home', 'skills', 'about', 'work', 'projects', 'education', 'community', 'archived']
             .map(id => document.getElementById(id));
 
         const sidebarObserver = new IntersectionObserver((entries) => {
