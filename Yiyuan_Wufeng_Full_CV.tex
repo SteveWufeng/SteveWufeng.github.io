@@ -1,0 +1,168 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=0.6in]{geometry}
+\usepackage{parskip}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fontawesome5}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+
+% Font
+\usepackage[T1]{fontenc}
+
+\pagestyle{empty}
+
+% Section formatting
+\titleformat{\section}{\large\bfseries\uppercase}{}{0em}{}[\vspace{-0.6em}\rule{\textwidth}{0.5pt}]
+\titlespacing{\section}{0pt}{0.5em}{0.2em}
+
+% Subsection formatting
+\titleformat{\subsection}{\bfseries}{}{0em}{}
+\titlespacing{\subsection}{0pt}{0.3em}{0em}
+
+\newcommand{\experience}[4]{
+  \subsection{\texorpdfstring{\makebox[\linewidth][s]{#1\hfill\normalfont #4}}{#1 --- #4}}
+  \textit{#2}\hfill\textit{#3}\par
+  \vspace{0.1em}
+}
+
+\newenvironment{bullets}{
+  \begin{itemize}[leftmargin=*,nosep,topsep=0.08em,itemsep=0.02em]
+}{
+  \end{itemize}
+}
+
+\begin{document}
+
+% Name
+\begin{center}
+  {\LARGE\textbf{Yiyuan (Steve) Wufeng}}\\[0.2em]
+  \href{tel:+15853703124}{{\small (585) 370-3124}} $\cdot$
+  \href{mailto:yfeng219@gmail.com}{{\small yfeng219@gmail.com}} $\cdot$
+  \href{https://linkedin.com/in/yiyuan-wufeng/}{{\small linkedin.com/in/yiyuan-wufeng}} $\cdot$
+  \href{https://stevewufeng.github.io}{{\small stevewufeng.github.io}}\\[0.05em]
+  {\small Computer Science Graduate $\cdot$ Cloud-Native \& AI-Assisted Development $\cdot$ U.S. Citizen}\\[0.05em]
+  {\small \textbf{Languages:} Chinese (Fluent) $\cdot$ English (Fluent) $\cdot$ Japanese (Intermediate)}\\[0.05em]
+\end{center}
+
+% EDUCATION
+\section{Education}
+\subsection{\texorpdfstring{\makebox[\linewidth][s]{Rochester Institute of Technology\hfill\normalfont Rochester, NY}}{Rochester Institute of Technology}}
+\textit{Bachelor of Science in Computer Science, Minor: Mathematics}\hfill\textit{May 2026}\par
+\vspace{-1.0em}
+\textbf{Cumulative GPA: 3.85/4.00}\par
+
+% SKILLS
+\section{Technical Skills}
+\begin{tabular}{@{}p{4.5cm}@{}p{\dimexpr\textwidth-4.5cm\relax}@{}}
+\textbf{Languages:}           & Python, Java, C++, C\#, C, TypeScript, Dart, HTML/CSS, SQL \\
+\textbf{Frameworks:}          & FastAPI, SpringBoot, React, Vue.js, Flutter, Prisma ORM, NextAuth.js \\
+\textbf{Databases:}           & PostgreSQL, MySQL, Firestore \\
+\textbf{Cloud \& DevOps:}     & Docker, Kubernetes, GitHub Actions, GitLab CI/CD, Linux, GCP, Cloudflare R2 \\
+\textbf{AI Dev \& Tools:}     & OpenCode (Multi-Agent Orchestration Framework), Claude Code, GitHub Copilot, vLLM, SGLang \\
+\textbf{Core Competencies:}   & RESTful API Design, RBAC, API Gateway Patterns, Data Modeling, Computer Vision, Multi-Agent Systems, IoT \\
+\end{tabular}
+
+% EXPERIENCE
+\section{Professional Experience}
+
+\experience{Freelance Software Engineer}{Buho}{Remote}{Jan 2026 - Present}
+\begin{bullets}
+  \item Architected a production-grade backend with TypeScript, PostgreSQL, and Prisma ORM, achieving clean API separation and normalized relational data management
+  \item Implemented RBAC and authentication flows managing multi-tier user lifecycles, cart state, and protected API routing for production-scale e-commerce
+  \item Containerized the full stack with Docker multi-stage builds and deployed via Railway with automated CI/CD, reducing deployments from manual scripts to push-triggered pipelines
+  \item Integrated Cloudflare R2 behind API gateway patterns, enforcing rate limiting and efficient asset delivery for media-heavy workloads
+  \item Directed multi-agent AI development with OpenCode, guiding LLM agents to generate production code through human-in-the-loop validation
+\end{bullets}
+\textit{Key Skills:} TypeScript, PostgreSQL, Prisma ORM, Docker, CI/CD, RBAC, Cloudflare R2, OpenCode, API Gateway\par
+
+\experience{Embedded Software Engineer}{Waygate Technologies (Baker Hughes)}{Skaneateles, NY}{Jul 2025 - Dec 2025}
+\begin{bullets}
+  \item Automated production quality tracking with CI/CD pipelines, providing actionable telemetry that cut manual inspection overhead and accelerated release validation
+  \item Processed and modeled large-scale industrial inspection data, optimizing backend pipeline throughput and improving production system reliability
+  \item Designed and deployed Python-driven test automation frameworks across distributed environments, increasing regression coverage and reducing post-release defects
+  \item Delivered computer vision models into production testing via C++ inference pipelines, enabling real-time defect detection
+  \item Guided AI coding assistants (Copilot, Claude Code) to accelerate C++ inference development, maintaining quality and documentation standards
+\end{bullets}
+\textit{Key Skills:} Python, C++, Data Pipelines, Automation Testing, CI/CD\par
+
+\experience{Jr. Software Engineer Intern}{Tive Technology}{Remote}{Jun 2024 - Sep 2024}
+\begin{bullets}
+  \item Built and optimized RESTful APIs with SpringBoot, reducing database query latency through streamlined data access patterns
+  \item Designed Firestore data models and security rules, enforcing secure multi-user access across the platform
+  \item Delivered 4 Flutter-based mobile features adopted by 1,000+ active users within the first quarter
+  \item Validated platform reliability through systematic load testing under growing multi-user concurrency
+\end{bullets}
+\textit{Key Skills:} RESTful APIs, Python, SpringBoot, Firestore, Data Modeling, GitHub Copilot\par
+
+\experience{Research Assistant}{RIT CAIR Lab (Computational Accessibility)}{Rochester, NY}{Sep 2023 - May 2024}
+\begin{bullets}
+  \item Containerized real-time data-processing pipelines with Docker, enabling reproducible one-command deployments across heterogeneous Linux research environments
+  \item Architected a RESTful API layer handling high-throughput live transcription streams, supporting real-time accessibility research without data loss
+  \item Structured and analyzed comparative experimental datasets for affective vs.\ traditional captioning, producing actionable insights for accessibility research
+  \item Built interactive captioning interfaces with React and Vue.js for comparing captioning modalities in real time
+\end{bullets}
+\textit{Key Skills:} Python, RESTful API Design, Docker, Google Cloud Platform, Linux, React, Vue.js\par
+
+\experience{Research Assistant}{RIT Global Cybersecurity Institute}{Rochester, NY}{Sep 2022 - Jul 2023}
+\begin{bullets}
+  \item Performed statistical analysis and processing on MITRE threat alerts to identify security patterns
+  \item Set up space cyber-physical simulations with NS-3 for satellite communication and motion modeling
+  \item Analyzed real-time satellite motion and communication systems using MATLAB and C++
+\end{bullets}
+\textit{Key Skills:} MATLAB, Python, C++, NS-3, Satellite Communications, Cybersecurity\par
+
+\experience{Research Intern}{Tufts University}{Medford, MA}{May 2022 - Jul 2022}
+\begin{bullets}
+  \item Optimized properties of novel polymers using gradient descent algorithms in MATLAB and C++
+  \item Applied object-oriented class structure and documentation practices to the Morpho-Lang compiler project
+  \item Solved compiler and modular design problems for Morpho-Lang, an open-source scientific computing language
+  \item Assembled a research poster presented to material science experts
+\end{bullets}
+\textit{Key Skills:} MATLAB, C++, Machine Learning, Compiler Design\par
+
+% PROJECTS
+\section{Projects}
+
+\experience{NeuralCube --- Autonomous Robot (Personal Research)}{Collaborator}{Remote}{2024 - Present}
+\begin{bullets}
+  \item Contributed to a personal research robot orchestrated by multi-agent LLMs and built on ROS2 as the backend-focused contributor
+  \item Deployed vLLM and SGLang inference servers on Linux for low-latency LLM responses in real-time autonomous decision-making
+  \item Integrated the multi-agent orchestration layer with ROS2 nodes, routing navigation, memory, and search tasks to specialized subagents
+  \item Managed robot digital twin state using ROS2 parameters and state publishers for consistency across perception, reasoning, and action loops
+\end{bullets}
+\textit{Key Skills:} Python, ROS2, Linux, vLLM, SGLang, Multi-Agent Systems, LLM Inference\par
+
+\experience{4G LTE Unlimited Distance Drone (Personal Project)}{}{Rochester, NY}{Aug 2023 - Dec 2024}
+\begin{bullets}
+  \item Built a programmable 4G LTE drone with Raspberry Pi, enabling beyond-visual-line-of-sight operation through internet-based communication
+  \item Implemented server-side real-time image segmentation and autonomous navigation for self-directed flight based on visual input
+  \item Integrated Pixhawk flight controller with ArduPilot firmware and Sixfab 4G LTE cellular hat for reliable remote piloting
+\end{bullets}
+\textit{Key Skills:} Python, Raspberry Pi, Computer Vision, IoT\par
+
+% LEADERSHIP
+\section{Leadership \& Community}
+\subsection{Computer Science House (CSH) --- RIT}
+\textit{Active Member}\hfill\textit{Aug 2021 - Present}\par
+\begin{bullets}
+  \item Active member of RIT's computer science living-learning community
+  \item Hosted 5 technical seminars and workshops on DevOps, Linux administration, and software development to mentor peers
+\end{bullets}
+
+\subsection{RIT Artificial Intelligence Club}
+\textit{Member}\hfill\textit{Aug 2022 - Present}\par
+\begin{bullets}
+  \item Explored active AI/ML research areas including large language models, computer vision, and autonomous systems
+  \item Collaborated on group projects within an AI enthusiast community
+\end{bullets}
+
+\section{Early Projects \& Interests}
+\begin{bullets}
+  \item 3D printing seminar and blog covering the full FDM pipeline, slicing to Gcode, and first-print guidance (2021)
+  \item Persistence of Vision (POV) display with custom 3D-printed armature, iterated through multiple prototypes (2021)
+  \item DIY ergonomic laptop stand designed and 3D-printed to improve daily comfort (2021)
+\end{bullets}
+
+\end{document}
