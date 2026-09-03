@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog — Yiyuan (Steve) Wufeng</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem('theme');
+          var theme = (stored === 'light' || stored === 'dark') ? stored : 'dark';
+          document.documentElement.setAttribute('data-theme', theme);
+        } catch (e) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      })();
+    </script>
+</head>
+<body>
+
+    <div class="masthead">
+      <div class="masthead__inner">
+        <nav class="masthead__nav">
+          <a href="index.html" class="masthead__home">steve</a>
+          <a href="index.html#skills">skills</a>
+          <a href="index.html#about">about</a>
+          <a href="index.html#work">experience</a>
+          <a href="index.html#projects">projects</a>
+          <a href="index.html#education">education</a>
+          <a href="index.html#community">community</a>
+          <a href="blog.html" style="color: var(--accent);">blog</a>
+        </nav>
+        <button type="button" class="theme-toggle" aria-label="Toggle light/dark theme">
+          <i class="fas fa-sun icon-light" aria-hidden="true"></i>
+          <i class="fas fa-moon icon-dark" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+
+    <main class="terminal">
+
+      <section class="terminal__section">
+        <span class="terminal__prompt">cat blog.md</span>
+        <div class="terminal__output">
+          <div class="terminal__whoami-row">
+            <div class="terminal__whoami-text">
+              <p class="terminal__whoami">Blog</p>
+              <p class="terminal__whoami-role">builds, teardowns, and things I learned along the way</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="terminal__section">
+        <span class="terminal__prompt">ls posts/</span>
+        <div class="terminal__output">
+          <div class="blog-list">
+
+            <article class="blog-post reveal">
+              <div class="blog-post__meta">
+                <span class="tag tag--blog">build</span>
+                <span class="blog-post__date">2023</span>
+              </div>
+              <h2 class="blog-post__title">
+                <a href="https://sites.google.com/g.rit.edu/stevew-blog/home?authuser=0" target="_blank" rel="noopener noreferrer">How to 3D Print?</a>
+              </h2>
+              <p class="blog-post__excerpt">A beginner-friendly seminar blog I wrote as a sophomore at RIT. Covers the full pipeline: how FDM printers work (layer-by-layer deposition), converting 3D models to Gcode with slicing software, and tips for getting started with your first print.</p>
+              <div class="blog-post__links">
+                <a href="https://sites.google.com/g.rit.edu/stevew-blog/home?authuser=0" target="_blank" rel="noopener noreferrer">read full blog &rarr;</a>
+              </div>
+              <span class="tags">3D Printing &bull; FDM &bull; CAD &bull; Gcode &bull; Teaching</span>
+            </article>
+
+            <article class="blog-post reveal">
+              <div class="blog-post__meta">
+                <span class="tag tag--blog">build</span>
+                <span class="blog-post__date">2023</span>
+              </div>
+              <h2 class="blog-post__title">Persistence of Vision Display</h2>
+              <p class="blog-post__excerpt">3D modeled and printed a custom spinning arm and enclosure for a POV display. Went through multiple failed iterations before getting it right — learned that iteration and patience are part of the process, not obstacles to it.</p>
+              <span class="tags">3D Modeling &bull; Rapid Prototyping &bull; Iterative Design</span>
+            </article>
+
+            <article class="blog-post reveal">
+              <div class="blog-post__meta">
+                <span class="tag tag--blog">build</span>
+                <span class="blog-post__date">2023</span>
+              </div>
+              <h2 class="blog-post__title">DIY Laptop Stand</h2>
+              <p class="blog-post__excerpt">Designed and printed my own laptop stand to fix neck pain from hunching over a laptop all day. A simple practical project that made a real difference in my daily comfort — and a reminder that technology should serve the people using it.</p>
+              <span class="tags">Ergonomics &bull; Practical Design &bull; Personal Project</span>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__follow">
+        <ul>
+          <li><strong>follow</strong></li>
+          <li><a href="https://github.com/SteveWufeng">github</a></li>
+          <li><a href="https://linkedin.com/in/yiyuan-wufeng/">linkedin</a></li>
+          <li><a href="mailto:yfeng219@gmail.com">email</a></li>
+        </ul>
+      </div>
+      <div class="site-footer__copyright">echo "&copy; 2026 Yiyuan (Steve) Wufeng"</div>
+    </footer>
+
+    <script>
+      (function () {
+        var button = document.querySelector('.theme-toggle');
+        if (!button) return;
+        button.addEventListener('click', function () {
+          var current = document.documentElement.getAttribute('data-theme');
+          var next = current === 'dark' ? 'light' : 'dark';
+          document.documentElement.setAttribute('data-theme', next);
+          try { localStorage.setItem('theme', next); } catch (e) {}
+        });
+      })();
+
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) entry.target.classList.add('active');
+        });
+      }, { threshold: 0.15 });
+      document.querySelectorAll('.reveal').forEach(function (el) { observer.observe(el); });
+    </script>
+</body>
+</html>

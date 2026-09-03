@@ -1,260 +1,271 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yiyuan (Steve) Wufeng | My Journey</title>
+    <title>Yiyuan (Steve) Wufeng</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem('theme');
+          var theme = (stored === 'light' || stored === 'dark') ? stored : 'dark';
+          document.documentElement.setAttribute('data-theme', theme);
+        } catch (e) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      })();
+    </script>
 </head>
 <body>
 
-    <nav class="sidebar" id="sidebar">
-        <div class="sidebar-header">
-            <img src="https://avatars.githubusercontent.com/u/86623538?v=4" alt="Steve" class="sidebar-avatar">
-            <span class="sidebar-name">Steve</span>
-        </div>
-        <a href="#" class="sidebar-link active" data-target="home"><i class="fas fa-home"></i> Home</a>
-        <a href="#skills" class="sidebar-link" data-target="skills"><i class="fas fa-cogs"></i> Skills</a>
-        <a href="#about" class="sidebar-link" data-target="about"><i class="fas fa-user-circle"></i> About</a>
-        <a href="#work" class="sidebar-link" data-target="work"><i class="fas fa-briefcase"></i> Work</a>
-        <a href="#projects" class="sidebar-link" data-target="projects"><i class="fas fa-rocket"></i> Projects</a>
-        <a href="#education" class="sidebar-link" data-target="education"><i class="fas fa-graduation-cap"></i> Education</a>
-        <a href="#community" class="sidebar-link" data-target="community"><i class="fas fa-users"></i> Community</a>
-        <a href="#archived" class="sidebar-link" data-target="archived"><i class="fas fa-archive"></i> Archived</a>
-    </nav>
-
-    <div class="main-content">
-
-    <header class="hero" id="home">
-        <img src="https://avatars.githubusercontent.com/u/86623538?v=4" alt="Steve" class="profile-pic">
-        <h1>Hey, I'm Steve. 👋</h1>
-        <p class="bio">Computer Science graduate from RIT (May 2026, 3.85 GPA). Cloud-Native &amp; AI-Assisted Development. U.S. Citizen.</p>
-        <div class="social-links">
-            <a href="mailto:yfeng219@gmail.com"><i class="fas fa-envelope"></i></a>
-            <a href="https://linkedin.com/in/yiyuan-wufeng/" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/SteveWufeng" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="Yiyuan_Wufeng_Resume.pdf" class="resume-btn">Grab my Resume</a>
-        </div>
-    </header>
-
-    <div class="container">
-        <h2 class="section-title reveal" id="skills"><i class="fas fa-cogs"></i> Technical Skills</h2>
-        <div class="reveal" style="margin-bottom: 60px;">
-            <div class="skills-grid">
-                <strong>Languages:</strong> <span>Python, Java, C++, C#, C, TypeScript, Dart, HTML/CSS, SQL</span>
-                <strong>Frameworks:</strong> <span>FastAPI, SpringBoot, React, Vue.js, Flutter, Prisma ORM, NextAuth.js</span>
-                <strong>Databases:</strong> <span>PostgreSQL, MySQL, Firestore</span>
-                <strong>Cloud &amp; DevOps:</strong> <span>Docker, Kubernetes, GitHub Actions, GitLab CI/CD, Linux, GCP, Cloudflare R2</span>
-                <strong>AI Development &amp; Tools:</strong> <span>OpenCode (Multi-Agent Orchestration Framework), Claude Code, GitHub Copilot, vLLM, SGLang</span>
-                <strong>Core Competencies:</strong> <span>RESTful API Design, RBAC, API Gateway Patterns, Data Modeling, Computer Vision, Multi-Agent Systems, IoT</span>
-            </div>
-        </div>
-
-        <h2 class="section-title reveal" id="about"><i class="fas fa-user-circle"></i> Get to Know Me</h2>
-        <div class="about-cards reveal">
-            <div class="stub-card">
-                <p class="stub-question">Who am I?</p>
-                <p class="stub-answer">I am a graduating CS student who cares about creating meaningful impact through technology. Impact doesn't have to be for the masses; it can be for a single person or the people I care about. I aim to create a community where everyone cares about others' well-being and happiness.</p>
-            </div>
-            <div class="stub-card">
-                <p class="stub-question">Fun Facts</p>
-                <p class="stub-answer">I was born in Venezuela, completed my primary education (grades 1–7) in China, and have navigated my secondary and higher education in the U.S. Living across three continents as a hard-of-hearing individual has given me wide world view.</p>
-            </div>
-            <div class="stub-card">
-                <p class="stub-question">Beyond the résumé</p>
-                <p class="stub-answer">My time at RIT's National Technical Institute for the Deaf (NTID) and the Computer Science House (CSH) shaped my belief that innovation is most effective when it is inclusive and for the common good. I am driven by the desire to create environments where everyone feels a genuine sense of belonging and empowerment.</p>
-            </div>
-            <div class="stub-card">
-                <p class="stub-question">How I build with AI</p>
-                <p class="stub-answer">I orchestrate multi-agent teams using OpenCode Ensemble — each agent works in an isolated sandboxed worktree so no agent can touch another's code, and every change goes through human review before it's merged. AI accelerates the process, but people stay accountable. This is how I think we build secure, high-trust software in an AI-assisted world.</p>
-            </div>
-        </div>
-
-        <h2 class="section-title reveal" id="work"><i class="fas fa-briefcase"></i> Work Experience</h2>
-        <main class="timeline">
-            <div class="timeline-item reveal">
-                <div class="date">Jan 2026 — Present</div>
-                <div class="content">
-                    <h3>Freelance Software Engineer @ Buho</h3>
-                    <p>Architected a production-grade backend with TypeScript, PostgreSQL, and Prisma ORM, achieving clean API separation and normalized relational data management. Implemented RBAC and authentication flows managing multi-tier user lifecycles, cart state, and protected API routing for production-scale e-commerce. Containerized the full stack with Docker multi-stage builds and deployed via Railway with automated CI/CD, reducing deployments from manual scripts to push-triggered pipelines. Integrated Cloudflare R2 behind API gateway patterns, enforcing rate limiting and efficient asset delivery for media-heavy workloads. Directed multi-agent AI development with OpenCode, guiding LLM agents to generate production code through human-in-the-loop validation.</p>
-                    <span class="tags">TypeScript • PostgreSQL • Prisma ORM • Docker • CI/CD • RBAC • Cloudflare R2 • OpenCode • GitHub Copilot • API Gateway</span>
-                </div>
-            </div>
-
-            <div class="timeline-item reveal">
-                <div class="date">Jul 2025 - Dec 2025 </div>
-                <div class="content">
-                    <h3>Embedded Software Engineer @ Waygate Technologies (Baker Hughes) </h3>
-                    <p>Automated production quality tracking with CI/CD pipelines, providing actionable telemetry that cut manual inspection overhead and accelerated release validation. Processed and modeled large-scale industrial inspection data, optimizing backend pipeline throughput and improving production system reliability. Designed and deployed Python-driven test automation frameworks across distributed environments, increasing regression coverage and reducing post-release defects. Delivered computer vision models into production testing via DirectML and C++ inference pipelines, enabling real-time defect detection. Guided AI coding assistants (Copilot, Claude Code) to accelerate C++ inference development, critically reviewing and iterating on generated code to maintain quality and documentation standards.</p>
-                    <span class="tags">Python • C++ • Data Pipelines • Automation Testing • CI/CD • GitHub Copilot</span>
-                </div>
-            </div>
-
-            <div class="timeline-item reveal">
-                <div class="date">Jun 2024 - Sep 2024 </div>
-                <div class="content">
-                    <h3>Jr. Software Engineer Intern @ Tive Technology </h3>
-                    <p>Built and optimized RESTful APIs with SpringBoot, reducing database query latency through streamlined data access patterns. Designed Firestore data models and security rules, enforcing secure multi-user access across the platform. Delivered 4 Flutter-based mobile features adopted by 1,000+ active users within the first quarter. Validated platform reliability through systematic load testing, ensuring consistent performance at scale under growing multi-user concurrency.</p>
-                    <span class="tags">RESTful APIs • Python • SpringBoot • Firestore • Data Modeling • GitHub Copilot</span>
-                </div>
-            </div>
-
-            <div class="timeline-item reveal">
-                <div class="date">Sep 2023 - May 2024 </div>
-                <div class="content">
-                    <h3>Research Assistant @ RIT CAIR Lab </h3>
-                    <p>Containerized real-time data-processing pipelines with Docker, enabling reproducible one-command deployments across heterogeneous Linux research environments. Architected a RESTful API layer handling high-throughput live transcription streams, supporting real-time accessibility research without data loss. Structured and analyzed comparative experimental datasets for affective vs. traditional captioning, producing actionable insights for accessibility research. Built interactive live captioning interfaces with React and Vue.js, enabling researchers to compare captioning modalities in real time.</p>
-                    <span class="tags">Python • RESTful API Design • Docker • Google Cloud Platform • Linux • React • Vue.js • GitHub Copilot</span>
-                </div>
-            </div>
-
-            <div class="timeline-item reveal">
-                <div class="date">Sep 2022 - Jul 2023 </div>
-                <div class="content">
-                    <h3>Research Assistant @ RIT Global Cybersecurity Institute </h3>
-                    <p>Performed statistical analysis and processing on MITRE threat alerts to identify security patterns. Set up space cyber-physical simulations with NS-3 for satellite communication and motion modeling. Analyzed real-time satellite motion and communication systems using MATLAB and C++.</p>
-                    <span class="tags">MATLAB • Python • C++ • NS-3 • Satellite Communications • Security</span>
-                </div>
-            </div>
-
-            <div class="timeline-item reveal">
-                <div class="date">May 2022 - Jul 2022 </div>
-                <div class="content">
-                    <h3>Research Intern @ Tufts University </h3>
-                    <p>Optimized properties of novel polymers using gradient descent algorithms in MATLAB and C++. Applied object-oriented class structure and documentation practices to the Morpho-Lang compiler project. Solved compiler and modular design problems for Morpho-Lang, an open-source scientific computing language. Assembled a research poster presented to material science experts.</p>
-                    <span class="tags">MATLAB • C++ • Machine Learning • Compiler Design</span>
-                </div>
-            </div>
-        </main>
-
-        <h2 class="section-title reveal" id="projects"><i class="fas fa-rocket"></i> Projects & Experiments</h2>
-        
-        <div class="project-grid">
-            <div class="project-card reveal">
-                <div class="project-card-header">
-                    <span class="project-date">2024 — Present</span>
-                    <h3>NeuralCube — Autonomous Robot</h3>
-                </div>
-                <p>A personal research robot orchestrated by multi-agent LLMs and built on ROS2. As the backend-focused contributor, I deployed vLLM and SGLang inference servers on Linux for low-latency LLM responses in real-time decision-making. I integrated the multi-agent orchestration layer with ROS2 nodes, routing tasks (navigation, memory, search) to specialized subagents via ROS2 topics and services. I also managed the robot's digital twin state using ROS2 parameters and state publishers, ensuring consistency across perception, reasoning, and action loops. To support collaborative development, I established documentation standards and systematic debugging practices across our Git workflow.</p>
-                <div class="project-links">
-                    <a href="https://chanelfcheng.github.io/NeuralCube-Docs/" target="_blank"><i class="fas fa-external-link-alt"></i> Docs</a>
-                </div>
-                <span class="tags">Python • ROS2 • vLLM • SGLang • Multi-Agent Systems • Computer Vision • Robotics</span>
-            </div>
-
-            <div class="project-card reveal">
-                <div class="project-card-header">
-                    <span class="project-date">Aug 2023 — Dec 2024</span>
-                    <h3>4G LTE Unlimited Distance Drone</h3>
-                </div>
-                <p>Built a fully programmable 4G LTE drone using Raspberry Pi with internet-based communication for beyond-visual-line-of-sight operation. Implemented server communication for real-time image segmentation and autonomous navigation commands. Integrated PixHawk flight controller with ArduPilot for stabilized flight and Sixfab 4G LTE cellular hat for connectivity.</p>
-                <span class="tags">Python • Raspberry Pi • ArduPilot • PixHawk • Computer Vision • IoT</span>
-            </div>
-        </div>
-
-        <h2 class="section-title reveal" id="education"><i class="fas fa-graduation-cap"></i> Education</h2>
-        <div class="edu-card reveal">
-            <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
-            <div class="edu-body">
-                <h3>Rochester Institute of Technology</h3>
-                <p class="edu-meta">Rochester, NY &mdash; Aug 2021 &mdash; May 2026</p>
-                <p class="edu-degree"><strong>Bachelor of Science in Computer Science</strong>, Minor: Mathematics <span class="edu-gpa">GPA: 3.85/4.00</span></p>
-            </div>
-        </div>
-
-        <h2 class="section-title reveal" id="community"><i class="fas fa-users"></i> Leadership &amp; Community</h2>
-        <div class="timeline" style="margin-bottom: 60px;">
-            <div class="timeline-item reveal">
-                <div class="date">Aug 2021 - Present </div>
-                <div class="content">
-                    <h3>Computer Science House (CSH)</h3>
-                    <p>Active member of RIT's CS-focused living-learning community. Hosted 5 technical seminars and workshops on DevOps, Linux administration, and software development to mentor peers and spread knowledge across the community.</p>
-                </div>
-            </div>
-            <div class="timeline-item reveal">
-                <div class="date">Aug 2022 - Present </div>
-                <div class="content">
-                    <h3>RIT Artificial Intelligence Club</h3>
-                    <p>Member of AI enthusiast community exploring active research areas in AI/ML. Participated in discussions on large language models, computer vision, and autonomous systems while collaborating on group projects.</p>
-                </div>
-            </div>
-        </div>
-
-    <h2 class="section-title reveal" id="archived"><i class="fas fa-archive"></i> Archived — Student Days</h2>
-        <div class="archived-intro reveal">
-            <p>Back in my early college years, I ran a blog about 3D printing as a teaching seminar. Here's what I was building and learning at the time.</p>
-        </div>
-
-        <div class="archived-grid">
-            <div class="archived-card reveal">
-                <a href="https://sites.google.com/g.rit.edu/stevew-blog/home?authuser=0" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; display: block;">
-                    <div class="archived-card-header">
-                        <span class="archived-badge">Blog</span>
-                        <h3>How to 3D Print?</h3>
-                    </div>
-                    <p>A beginner-friendly seminar blog I wrote as a sophomore at RIT. Covers the full pipeline: how FDM printers work (layer-by-layer deposition), converting 3D models to Gcode with slicing software, and tips for getting started with your first print.</p>
-                    <span class="tags">3D Printing • FDM • CAD • Gcode • Teaching</span>
-                </a>
-            </div>
-
-            <div class="archived-card reveal">
-                <div class="archived-card-header">
-                    <span class="archived-badge">Build</span>
-                    <h3>Persistence of Vision Display</h3>
-                </div>
-                <p>3D modeled and printed a custom spinning arm and enclosure for a POV display. Went through multiple failed iterations before getting it right — learned that iteration and patience are part of the process, not obstacles to it.</p>
-                <span class="tags">3D Modeling • Rapid Prototyping • Iterative Design</span>
-            </div>
-
-            <div class="archived-card reveal">
-                <div class="archived-card-header">
-                    <span class="archived-badge">Build</span>
-                    <h3>DIY Laptop Stand</h3>
-                </div>
-                <p>Designed and printed my own laptop stand to fix neck pain from hunching over a laptop all day. A simple practical project that made a real difference in my daily comfort — and a reminder that technology should serve the people using it.</p>
-                <span class="tags">Ergonomics • Practical Design • Personal Project</span>
-            </div>
-        </div>
-
+    <div class="masthead">
+      <div class="masthead__inner">
+        <nav class="masthead__nav">
+          <a href="#" class="masthead__home">steve</a>
+          <a href="#skills">skills</a>
+          <a href="#about">about</a>
+          <a href="#work">experience</a>
+          <a href="#projects">projects</a>
+          <a href="#education">education</a>
+          <a href="#community">community</a>
+          <a href="blog.html">blog</a>
+        </nav>
+        <button type="button" class="theme-toggle" aria-label="Toggle light/dark theme">
+          <i class="fas fa-sun icon-light" aria-hidden="true"></i>
+          <i class="fas fa-moon icon-dark" aria-hidden="true"></i>
+        </button>
+      </div>
     </div>
 
-    <footer>
-        <p>Updated June 09, 2026</p>
+    <main class="terminal">
+
+      <section class="terminal__section">
+        <span class="terminal__prompt">whoami</span>
+        <div class="terminal__output">
+          <div class="terminal__whoami-row">
+            <img class="terminal__avatar" src="https://avatars.githubusercontent.com/u/86623538?v=4" alt="Steve">
+            <div class="terminal__whoami-text">
+              <p class="terminal__whoami">Yiyuan (Steve) Wufeng</p>
+              <p class="terminal__whoami-role">cs graduate @ rit — cloud-native &amp; ai-assisted development</p>
+              <ul class="terminal__social">
+                <li><a href="https://github.com/SteveWufeng" rel="me"><i class="fab fa-github" aria-hidden="true"></i> github</a></li>
+                <li><a href="https://linkedin.com/in/yiyuan-wufeng/" rel="me"><i class="fab fa-linkedin" aria-hidden="true"></i> linkedin</a></li>
+                <li><a href="mailto:yfeng219@gmail.com"><i class="fas fa-envelope" aria-hidden="true"></i> email</a></li>
+                <li><a href="Yiyuan_Wufeng_Resume.pdf"><i class="fas fa-file-pdf" aria-hidden="true"></i> resume</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="terminal__section" id="skills">
+        <span class="terminal__prompt">cat skills.md</span>
+        <div class="terminal__output">
+          <div class="skills-grid">
+            <strong>Languages:</strong> <span>Python, Java, C++, C#, C, TypeScript, Dart, HTML/CSS, SQL</span>
+            <strong>Frameworks:</strong> <span>FastAPI, SpringBoot, React, Vue.js, Flutter, Prisma ORM, NextAuth.js</span>
+            <strong>Databases:</strong> <span>PostgreSQL, MySQL, Firestore</span>
+            <strong>Cloud &amp; DevOps:</strong> <span>Docker, Kubernetes, GitHub Actions, GitLab CI/CD, Linux, GCP, Cloudflare R2</span>
+            <strong>AI Development:</strong> <span>OpenCode, Claude Code, GitHub Copilot, vLLM, SGLang</span>
+            <strong>Core:</strong> <span>RESTful API Design, RBAC, API Gateway Patterns, Data Modeling, Computer Vision, Multi-Agent Systems, IoT</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="terminal__section" id="about">
+        <span class="terminal__prompt">cat about.md</span>
+        <div class="terminal__output">
+          <div class="about-cards">
+            <div class="stub-card">
+              <p class="stub-question">Who am I?</p>
+              <p class="stub-answer">I am a graduating CS student who cares about creating meaningful impact through technology. Impact doesn't have to be for the masses; it can be for a single person or the people I care about. I aim to create a community where everyone cares about others' well-being and happiness.</p>
+            </div>
+            <div class="stub-card">
+              <p class="stub-question">Fun Facts</p>
+              <p class="stub-answer">I was born in Venezuela, completed my primary education (grades 1–7) in China, and have navigated my secondary and higher education in the U.S. Living across three continents as a hard-of-hearing individual has given me wide world view.</p>
+            </div>
+            <div class="stub-card">
+              <p class="stub-question">Beyond the résumé</p>
+              <p class="stub-answer">My time at RIT's National Technical Institute for the Deaf (NTID) and the Computer Science House (CSH) shaped my belief that innovation is most effective when it is inclusive and for the common good. I am driven by the desire to create environments where everyone feels a genuine sense of belonging and empowerment.</p>
+            </div>
+            <div class="stub-card">
+              <p class="stub-question">How I build with AI</p>
+              <p class="stub-answer">I orchestrate multi-agent teams using OpenCode Ensemble — each agent works in an isolated sandboxed worktree so no agent can touch another's code, and every change goes through human review before it's merged. AI accelerates the process, but people stay accountable.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="terminal__section" id="work">
+        <span class="terminal__prompt">ls experience/</span>
+        <div class="terminal__output">
+          <div class="timeline">
+            <div class="timeline-item reveal">
+              <div class="date">Jan 2026 — Present</div>
+              <div class="content">
+                <h3>Freelance Software Engineer @ Buho</h3>
+                <p>Architected a production-grade backend with TypeScript, PostgreSQL, and Prisma ORM, achieving clean API separation and normalized relational data management. Implemented RBAC and authentication flows managing multi-tier user lifecycles, cart state, and protected API routing for production-scale e-commerce. Containerized the full stack with Docker multi-stage builds and deployed via Railway with automated CI/CD. Integrated Cloudflare R2 behind API gateway patterns, enforcing rate limiting and efficient asset delivery for media-heavy workloads. Directed multi-agent AI development with OpenCode, guiding LLM agents to generate production code through human-in-the-loop validation.</p>
+                <span class="tags">TypeScript &bull; PostgreSQL &bull; Prisma ORM &bull; Docker &bull; CI/CD &bull; RBAC &bull; Cloudflare R2 &bull; OpenCode</span>
+              </div>
+            </div>
+
+            <div class="timeline-item reveal">
+              <div class="date">Jul 2025 — Dec 2025</div>
+              <div class="content">
+                <h3>Embedded Software Engineer @ Waygate Technologies (Baker Hughes)</h3>
+                <p>Automated production quality tracking with CI/CD pipelines, providing actionable telemetry that cut manual inspection overhead and accelerated release validation. Processed and modeled large-scale industrial inspection data, optimizing backend pipeline throughput and improving production system reliability. Designed and deployed Python-driven test automation frameworks across distributed environments. Delivered computer vision models into production testing via DirectML and C++ inference pipelines, enabling real-time defect detection. Guided AI coding assistants (Copilot, Claude Code) to accelerate C++ inference development.</p>
+                <span class="tags">Python &bull; C++ &bull; Data Pipelines &bull; Automation Testing &bull; CI/CD &bull; GitHub Copilot</span>
+              </div>
+            </div>
+
+            <div class="timeline-item reveal">
+              <div class="date">Jun 2024 — Sep 2024</div>
+              <div class="content">
+                <h3>Jr. Software Engineer Intern @ Tive Technology</h3>
+                <p>Built and optimized RESTful APIs with SpringBoot, reducing database query latency through streamlined data access patterns. Designed Firestore data models and security rules, enforcing secure multi-user access across the platform. Delivered 4 Flutter-based mobile features adopted by 1,000+ active users within the first quarter. Validated platform reliability through systematic load testing.</p>
+                <span class="tags">RESTful APIs &bull; Python &bull; SpringBoot &bull; Firestore &bull; Data Modeling &bull; GitHub Copilot</span>
+              </div>
+            </div>
+
+            <div class="timeline-item reveal">
+              <div class="date">Sep 2023 — May 2024</div>
+              <div class="content">
+                <h3>Research Assistant @ RIT CAIR Lab</h3>
+                <p>Containerized real-time data-processing pipelines with Docker, enabling reproducible one-command deployments across heterogeneous Linux research environments. Architected a RESTful API layer handling high-throughput live transcription streams, supporting real-time accessibility research without data loss. Built interactive live captioning interfaces with React and Vue.js.</p>
+                <span class="tags">Python &bull; RESTful API Design &bull; Docker &bull; GCP &bull; Linux &bull; React &bull; Vue.js</span>
+              </div>
+            </div>
+
+            <div class="timeline-item reveal">
+              <div class="date">Sep 2022 — Jul 2023</div>
+              <div class="content">
+                <h3>Research Assistant @ RIT Global Cybersecurity Institute</h3>
+                <p>Performed statistical analysis and processing on MITRE threat alerts to identify security patterns. Set up space cyber-physical simulations with NS-3 for satellite communication and motion modeling. Analyzed real-time satellite motion and communication systems using MATLAB and C++.</p>
+                <span class="tags">MATLAB &bull; Python &bull; C++ &bull; NS-3 &bull; Satellite Communications &bull; Security</span>
+              </div>
+            </div>
+
+            <div class="timeline-item reveal">
+              <div class="date">May 2022 — Jul 2022</div>
+              <div class="content">
+                <h3>Research Intern @ Tufts University</h3>
+                <p>Optimized properties of novel polymers using gradient descent algorithms in MATLAB and C++. Applied object-oriented class structure and documentation practices to the Morpho-Lang compiler project. Assembled a research poster presented to material science experts.</p>
+                <span class="tags">MATLAB &bull; C++ &bull; Machine Learning &bull; Compiler Design</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="terminal__section" id="projects">
+        <span class="terminal__prompt">ls projects/</span>
+        <div class="terminal__output">
+          <div class="project-grid">
+            <article class="project-card project-card--agentic reveal">
+              <div class="project-card__body">
+                <div class="project-card__tag-row">
+                  <span class="tag tag--agentic">agentic</span>
+                </div>
+                <h2 class="project-card__title">NeuralCube — Autonomous Robot</h2>
+                <div class="project-card__desc">
+                  <p>A personal research robot orchestrated by multi-agent LLMs and built on ROS2. As the backend-focused contributor, I deployed vLLM and SGLang inference servers on Linux for low-latency LLM responses in real-time decision-making. I integrated the multi-agent orchestration layer with ROS2 nodes, routing tasks (navigation, memory, search) to specialized subagents via ROS2 topics and services. I also managed the robot's digital twin state using ROS2 parameters and state publishers, and established documentation standards and systematic debugging practices across our Git workflow.</p>
+                </div>
+                <p class="project-card__links">
+                  <a href="https://chanelfcheng.github.io/NeuralCube-Docs/">docs &rarr;</a>
+                </p>
+              </div>
+            </article>
+
+            <article class="project-card project-card--experience reveal">
+              <div class="project-card__body">
+                <div class="project-card__tag-row">
+                  <span class="tag tag--experience">hardware</span>
+                </div>
+                <h2 class="project-card__title">4G LTE Unlimited Distance Drone</h2>
+                <div class="project-card__desc">
+                  <p>Built a fully programmable 4G LTE drone using Raspberry Pi with internet-based communication for beyond-visual-line-of-sight operation. Implemented server communication for real-time image segmentation and autonomous navigation commands. Integrated PixHawk flight controller with ArduPilot for stabilized flight and Sixfab 4G LTE cellular hat for connectivity.</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="terminal__section" id="education">
+        <span class="terminal__prompt">cat education.md</span>
+        <div class="terminal__output">
+          <div class="edu-card reveal">
+            <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
+            <div class="edu-body">
+              <h3>Rochester Institute of Technology</h3>
+              <p class="edu-meta">Rochester, NY &mdash; Aug 2021 &mdash; May 2026</p>
+              <p class="edu-degree"><strong>Bachelor of Science in Computer Science</strong>, Minor: Mathematics <span class="edu-gpa">GPA: 3.85/4.00</span></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="terminal__section" id="community">
+        <span class="terminal__prompt">cat community.md</span>
+        <div class="terminal__output">
+          <div class="timeline">
+            <div class="timeline-item reveal">
+              <div class="date">Aug 2021 — Present</div>
+              <div class="content">
+                <h3>Computer Science House (CSH)</h3>
+                <p>Active member of RIT's CS-focused living-learning community. Hosted 5 technical seminars and workshops on DevOps, Linux administration, and software development to mentor peers and spread knowledge across the community.</p>
+              </div>
+            </div>
+            <div class="timeline-item reveal">
+              <div class="date">Aug 2022 — Present</div>
+              <div class="content">
+                <h3>RIT Artificial Intelligence Club</h3>
+                <p>Member of AI enthusiast community exploring active research areas in AI/ML. Participated in discussions on large language models, computer vision, and autonomous systems while collaborating on group projects.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__follow">
+        <ul>
+          <li><strong>follow</strong></li>
+          <li><a href="https://github.com/SteveWufeng">github</a></li>
+          <li><a href="https://linkedin.com/in/yiyuan-wufeng/">linkedin</a></li>
+          <li><a href="mailto:yfeng219@gmail.com">email</a></li>
+        </ul>
+      </div>
+      <div class="site-footer__copyright">echo "&copy; 2026 Yiyuan (Steve) Wufeng"</div>
     </footer>
 
-    </div><!-- .main-content -->
-
     <script>
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) entry.target.classList.add('active');
-            });
-        }, { threshold: 0.15 });
+      // Theme toggle
+      (function () {
+        var button = document.querySelector('.theme-toggle');
+        if (!button) return;
+        button.addEventListener('click', function () {
+          var current = document.documentElement.getAttribute('data-theme');
+          var next = current === 'dark' ? 'light' : 'dark';
+          document.documentElement.setAttribute('data-theme', next);
+          try { localStorage.setItem('theme', next); } catch (e) {}
+        });
+      })();
 
-        document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
-
-        // ── Sidebar scroll spy ──
-        const sidebarLinks = document.querySelectorAll('.sidebar-link');
-        const sections = ['home', 'skills', 'about', 'work', 'projects', 'education', 'community', 'archived']
-            .map(id => document.getElementById(id));
-
-        const sidebarObserver = new IntersectionObserver((entries) => {
-            let activeId = null;
-            entries.forEach(entry => {
-                if (entry.isIntersecting) activeId = entry.target.id;
-            });
-            if (activeId) {
-                sidebarLinks.forEach(link => {
-                    link.classList.toggle('active', link.dataset.target === activeId);
-                });
-            }
-        }, { rootMargin: '-30% 0px -60% 0px' });
-
-        sections.forEach(s => { if (s) sidebarObserver.observe(s); });
+      // Scroll reveal
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) entry.target.classList.add('active');
+        });
+      }, { threshold: 0.15 });
+      document.querySelectorAll('.reveal').forEach(function (el) { observer.observe(el); });
     </script>
 </body>
 </html>
