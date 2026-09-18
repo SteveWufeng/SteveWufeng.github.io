@@ -2,7 +2,8 @@
 
 \usepackage[margin=0.6in]{geometry}
 \usepackage{parskip}
-\usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+\usepackage[colorlinks=true, linkcolor=blue, urlcolor=blue, citecolor=blue]{hyperref}
 \usepackage{fontawesome5}
 \usepackage{enumitem}
 \usepackage{titlesec}
@@ -26,7 +27,7 @@
 \newcommand{\experience}[4]{
   \subsection{\texorpdfstring{\makebox[\linewidth][s]{#1\hfill\normalfont #4}}{#1 --- #4}}
   \textit{#2}\hfill\textit{#3}\par
-  \vspace{0.1em}
+  \vspace{0.05em}
 }
 
 \newenvironment{bullets}{
@@ -38,7 +39,7 @@
 \newcommand{\project}[4]{
   \subsection{\texorpdfstring{\makebox[\linewidth][s]{#1\hfill\normalfont #4}}{#1 --- #4}}
   \textit{#2}\hfill\textit{#3}\par
-  \vspace{0.1em}
+  \vspace{0.05em}
 }
 
 \begin{document}
@@ -50,7 +51,7 @@
   \href{mailto:yfeng219@gmail.com}{{\small yfeng219@gmail.com}} $\cdot$
   \href{https://linkedin.com/in/yiyuan-wufeng/}{{\small linkedin.com/in/yiyuan-wufeng}} $\cdot$
   \href{https://stevewufeng.github.io}{{\small stevewufeng.github.io}}\\[0.01em]
-  {\small Computer Science Graduate $\cdot$ AI \& Embedded Systems $\cdot$ Robotics $\cdot$ U.S. Citizen}\\[0.01em]
+  {\small Computer Science Graduate \& AI-Assisted Development \& Data Analyst \& U.S. Citizen}\\[0.01em]
   {\small \textbf{Languages:} Chinese (Fluent) $\cdot$ English (Fluent) $\cdot$ Japanese (Intermediate)}\\[0.01em]
 \end{center}
 
@@ -64,66 +65,77 @@
 % SKILLS
 \section{Technical Skills}
 \begin{tabular}{@{}p{4.5cm}@{}p{\dimexpr\textwidth-4.5cm\relax}@{}}
-\textbf{Languages:}           & Python, C++, C, TypeScript, Java, C\#, Dart, HTML/CSS, SQL \\
-\textbf{AI \& ML:}            & vLLM, SGLang, LangGraph, ComfyUI, Multi-Agent Systems, Computer Vision, OpenCode \\
-\textbf{Embedded \& Robotics:} & ROS2, Linux, ArduPilot, Raspberry Pi, PixHawk, DirectML \\
-\textbf{Cloud \& DevOps:}     & Docker, Kubernetes, GitHub Actions, GitLab CI/CD, GCP \\
-\textbf{Frameworks:}          & FastAPI, SpringBoot, React, Vue.js, Flutter, Prisma ORM \\
-\textbf{Core:}                & RESTful API Design, Data Modeling, IoT, RBAC \\
+\textbf{Languages:}           & Python, C\#, C, TypeScript, Java, HTML/CSS, Flutter \\
+\textbf{Cloud \& DevOps:}     & GitHub, Linux, PostgreSQL, CI/CD, Docker, Cloudflare R2, Spring Boot, Agile\\
+\textbf{AI Dev \& Tools:} & OpenCode, GitHub Copilot \\
+\textbf{Core Competencies:}   & RESTful API Design, IoT \\
 \end{tabular}
 
 % EXPERIENCE
 \section{Professional Experience}
 
-\experience{Visiting AI Research Associate}{Institute for Informatics and Applied Technology (IIAT), Gonzaga University}{Spokane, WA}{Aug 2026 - Present}
+\experience{Freelance Software Engineer}{Buho}{Remote}{Jan 2026 - Jul 2026}
 \begin{bullets}
-  \item Evaluating LangGraph to replace hardcoded decision logic in multi-agent robotic systems with stateful, customizable pipeline orchestration
-  \item Investigating ComfyUI for rapid robot showcase generation, enabling visual prototyping and marketing of AI-driven robotics concepts before full implementation
-  \item Researching agent-driven simulation frameworks (e.g., Qwen-AgentWorld) for interactive simulation environments with cross-domain knowledge transfer
+  \item Deployed e-commerce platform on Railway with TypeScript and PostgreSQL, supporting cloud-native architecture and microservices.
+  \item Directed multi-agent AI development with OpenCode, guiding LLM agents to develop features.
+  \item Wrote CI/CD workflow on GitHub to ensure Docker containers built successfully before deploying to Railway.
+  \item Built data analysis dashboard for order summaries, revenue tracking, and inventory and demand overview.
 \end{bullets}
-\textit{Key Skills:} Python, LangGraph, ComfyUI, Multi-Agent Systems, ROS2 Integration\par
+\textit{Key Skills:} TypeScript, PostgreSQL, Docker, Cloudflare R2, OpenCode, CI/CD\par
 
 \experience{Embedded Software Engineer}{Waygate Technologies (Baker Hughes)}{Skaneateles, NY}{Jul 2025 - Dec 2025}
 \begin{bullets}
-  \item Delivered computer vision models into production testing via DirectML and C++ inference pipelines, enabling real-time defect detection on industrial inspection systems
-  \item Processed and modeled large-scale industrial inspection data, optimizing backend pipeline throughput for embedded inference workloads
-  \item Guided AI coding assistants (Copilot, Claude Code) to accelerate C++ inference development, critically reviewing and iterating on generated code
+  \item Ran manual smoke tests and wrote automated test cases to ensure high-quality releases.
+  \item Processed and analyzed image/video quality data for product quality control.
+  \item Conducted code reviews and received feedback from team members in an agile development environment.
+  \item Collaborated with cross-functional teams to identify, document, and resolve software issues.
 \end{bullets}
 \vspace{-0.5em}
-\textit{Key Skills:} C++, Python, Computer Vision, DirectML, Embedded Inference, AI-Assisted Development\par
+\textit{Key Skills:} C\#, Automation Testing, GitHub Copilot, Agile, DevOps, Spring Boot \par
 
 \experience{Jr. Software Engineer Intern}{Tive Technology}{Remote}{Jun 2024 - Sep 2024}
 \begin{bullets}
-  \item Built and optimized RESTful APIs with SpringBoot and designed Firestore data models with security rules for multi-user access
-  \item Delivered 4 Flutter-based mobile features adopted by 1,000+ active users and validated platform reliability through load testing
+  \item Designed and built UI for a social media mobile app using Flutter for the deaf community.
+  \item Worked with distributed systems using Google Cloud Platform and Firebase Database.
+  \item Implemented role-based access using Firestore Security Rules to enforce data isolation.
 \end{bullets}
-\textit{Key Skills:} Python, SpringBoot, Firestore, Flutter, RESTful APIs\par
+\textit{Key Skills:} Flutter, GitHub Copilot, Google Cloud Platform, Firebase Database\par
 
 \experience{Research Assistant}{RIT CAIR Lab (Computational Accessibility \& Inclusion Research)}{Rochester, NY}{Sep 2023 - May 2024}
 \begin{bullets}
-  \item Containerized real-time data pipelines with Docker and built a RESTful API for high-throughput live transcription streams
-  \item Built interactive captioning interfaces with React and Vue.js for comparative accessibility research
+  \item Built HTML/CSS web app for visualizing emotion in text.  
+  \item Researched real-time emotion detection in speech using Wav2Vec2 and Whisper models.
+  \item Deployed Wav2Vec2 on Google Cloud Platform for real-time affective captioning.
+  \item Collected eye-tracking data for accessibility analysis study.
 \end{bullets}
-\textit{Key Skills:} Python, Docker, RESTful API Design, GCP, Linux, React\par
+\textit{Key Skills:} Python, HTML, CSS, GitHub\par
 
 % PROJECTS
 \section{Projects}
 
-\project{NeuralCube --- Autonomous Robot (Personal Research)}{Collaborator}{Remote}{2024 - Present}
+\project{NeuralCube - Autonomous Robot}{Collaborator, owner: Chanel-Cheng-\href{https://chanelfcheng.github.io/NeuralCube-Docs/}{\textit{Project Website}}}{Spokane, WA}{Sep 2025 - Present}
 \begin{bullets}
-  \item Architected a multi-agent LLM orchestration layer on ROS2, routing navigation, memory, and search tasks to specialized subagents via ROS2 topics and services
-  \item Deployed vLLM and SGLang inference servers on Linux for low-latency LLM responses in real-time autonomous decision-making
-  \item Managed robot digital twin state using ROS2 parameters and state publishers, ensuring consistency across perception, reasoning, and action loops
-  \item Identified pipeline rigidity as a core limitation, motivating current research into LangGraph for stateful, reconfigurable agent orchestration
+  \item Helped with ESP32 firmware and wiring for motor control.
+  \item Helped design and 3D-print a custom robot chassis.
+  \item Helped set up Raspberry Pi server and configured secure remote connection.
 \end{bullets}
-\textit{Key Skills:} Python, ROS2, Linux, vLLM, SGLang, Multi-Agent Systems, LLM Inference\par
+\textit{Key Skills:} C, Arduino, ESP32, 3D Printing, OnShape, GitHub\par
 
-\project{4G LTE Unlimited Distance Drone}{Personal Project}{Rochester, NY}{Aug 2023 - Dec 2024}
+
+\project{4G LTE Unlimited Distance Drone}{Collaborator, owner:Chanel-Cheng-\href{https://github.com/chanelfcheng/LTE-Drone}{\textit{Github Repo}}}{Rochester, NY}{Aug 2023 - Dec 2024}
 \begin{bullets}
-  \item Built a programmable 4G LTE drone with Raspberry Pi, enabling beyond-visual-line-of-sight operation through internet-based communication
-  \item Implemented server-side real-time image segmentation and autonomous navigation, enabling self-directed flight based on visual input
-  \item Integrated PixHawk flight controller with ArduPilot firmware and Sixfab 4G LTE cellular hat for reliable remote piloting
+  \item Helped build a 4G LTE remote drone for long-distance control.
+  \item Helped configure reverse SSH and port forwarding for secure access to the remote drone.
 \end{bullets}
-\textit{Key Skills:} Python, Raspberry Pi, Computer Vision, IoT\par
+\textit{Key Skills:} Python, Raspberry Pi, Sixfab 4G LTE, IoT, Reverse SSH Tunneling, GitHub\par
+
+% VOLUNTEER
+\section{Volunteer}
+\experience{Visiting AI Research Associate (Volunteer)}{Institute for Informatics and Applied Technology (IIAT), Gonzaga University}{Spokane, WA}{Aug 2026 - Present}
+\begin{bullets}
+  \item Helping research node-based AI tools for building and adjusting AI pipelines.
+  \item Testing ComfyUI for visual prototyping and LangGraph for step-by-step agent workflows.
+\end{bullets}
+\textit{Key Skills:} Python, ComfyUI, LangGraph\par
 
 \end{document}
